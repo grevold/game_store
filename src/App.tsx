@@ -1,8 +1,12 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
 function App() {
   return (
-    <div >
-      Hello, world!
-    </div>
+    <Router>
+      <Routes>
+        <Route element={<h1>Hello, world!</h1>} path={"*"} />
+      </Routes>
+    </Router>
   );
 }
 
