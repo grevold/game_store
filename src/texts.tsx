@@ -15,5 +15,11 @@ export const texts = {
             },
 
         }
+    },
+    HeaderNav: {
+        MainPage: "Главная",
+        CatalogPage: "Каталог",
+        NewsPage: "Новости",
+        SignUpPage: "Sign Up"
     }
 }

@@ -1,10 +1,10 @@
 import { Nav } from "../../components/Nav/Nav";
-import s from "./MainPage.module.css"
-export const MainPage = () => {
+import s from "./CatalogPage.module.css";
+export function CatalogPage() {
     return (
         <div className={s.root}>
             <Nav />
-            <h1>Главная страница</h1>
+            <h1>Каталог</h1>
         </div>
     )
 }

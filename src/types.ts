@@ -11,6 +11,9 @@ export type UserState = {
 
 export enum RoutePath {
   MainPage = "*",
-  SignUp = "/sign-up",
+  CatalogPage = "/catalog",
+  NewsPage = "/news",
+  SignUpPage = "/sign-up",
   CartPage = "/cart",
+
 }
