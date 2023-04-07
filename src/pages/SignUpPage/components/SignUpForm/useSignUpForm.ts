@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { object, ref, string } from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { texts } from "../../../../texts";
 
 // Значения, которые мы будем доставать из формы.
 export interface FormValues {
@@ -9,14 +10,28 @@ export interface FormValues {
   repeatPassword: string;
 }
 
+
+export interface Email {
+  required: string,
+  email: string
+}
+export interface Password {
+  required: string,
+  min: string,
+  repeatPassword: string
+}
+
+const { email: Email, password: Password } = texts.Errors.SignUp;
+
+
 const formSchema = object().shape({
   email: string()
-    .required("email нужно обязательно указать")
-    .email("email невалидный"),
+    .required(Email.required)
+    .email(Email.email),
   password: string()
-    .required("пароль нужно обязательно придумать")
-    .min(6, "минимальная длина пароля должна быть 6 символов"),
-  repeatPassword: string().oneOf([ref("password")], "пароли не совпадают"),
+    .required(Password.required)
+    .min(6, Password.min),
+  repeatPassword: string().oneOf([ref("password")], Password.repeatPassword),
 });
 
 export const useSignUpForm = (
