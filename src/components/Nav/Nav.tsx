@@ -1,9 +1,9 @@
 import { texts } from "../../texts";
 import { Link } from "react-router-dom";
 import { store } from "../../store";
-import { Navigate } from "react-router-dom";
 import { RoutePath, UserAuthStatus } from "../../types";
-import { Cart } from "../Cart/Cart";
+import { CartIcon } from "../../icons/CartIcon";
+
 
 
 import s from "./Nav.module.css"
@@ -22,7 +22,7 @@ export const Nav = observer(() => {
                     <li><Link className={s.title} key={NewsPage} to={RoutePath.NewsPage}>{NewsPage}</Link></li>
                 </ul>
                 <ul className={s.user}>
-                    <li><Link className={s.title} key={SignUpPage} to={RoutePath.CartPage}><Cart /></Link></li>
+                    <li><Link className={s.title} key={SignUpPage} to={RoutePath.CartPage}><CartIcon /></Link></li>
 
                 </ul>
 

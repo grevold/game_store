@@ -5,10 +5,12 @@ import { MainPage } from "./pages/MainPage/MainPage";
 import { CartPage } from "./pages/CartPage/CartPage";
 import { CatalogPage } from "./pages/CatalogPage/CatalogPage";
 import { NewsPage } from "./pages/NewsPage/NewsPage";
+import { Nav } from "./components/Nav/Nav";
 
 function App() {
   return (
     <Router>
+      <Nav />
       <Routes>
         <Route element={<CartPage />} path={RoutePath.CartPage} />
         <Route element={<SignUpPage />} path={RoutePath.SignUpPage} />
