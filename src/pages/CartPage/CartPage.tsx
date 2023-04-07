@@ -1,3 +1,9 @@
+import s from "./CartPage.module.css";
+
+
 export const CartPage = () => {
-    return <h2>Корзина</h2>
+    return (
+        <div className={s.root}>
+            <h2>Корзина</h2>
+        </div>)
 }

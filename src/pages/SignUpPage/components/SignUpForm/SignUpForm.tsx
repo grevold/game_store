@@ -1,7 +1,7 @@
 import { useSignUpForm } from "./useSignUpForm";
 import s from "./SignUpForm.module.css";
 
-import { Logo } from "./../../../../components/logo/Logo"
+import { Logo } from "../../../../icons/Logo"
 
 interface Props {
   onSubmit: (email: string, password: string) => void;
