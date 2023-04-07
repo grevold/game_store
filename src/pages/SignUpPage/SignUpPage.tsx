@@ -10,6 +10,7 @@ import s from "./SignUpPage.module.css";
 export const SignUpPage = observer(() => {
   const userState = store.getUserState();
 
+
   // Если юзер уже авторизован, то редиректим его с этой страницы.
   if (userState.status === UserAuthStatus.Authorized) {
     return <Navigate to={RoutePath.CartPage} />;
@@ -19,6 +20,7 @@ export const SignUpPage = observer(() => {
   if (userState.status === UserAuthStatus.Unauthorized) {
     return <SignUpPageContent />;
   }
-
   return <Preloader />;
+
+
 });
