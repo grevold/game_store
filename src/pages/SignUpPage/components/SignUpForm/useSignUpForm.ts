@@ -11,27 +11,19 @@ export interface FormValues {
 }
 
 
-export interface Email {
-  required: string,
-  email: string
-}
-export interface Password {
-  required: string,
-  min: string,
-  repeatPassword: string
-}
 
-const { email: Email, password: Password } = texts.Errors.SignUp;
+
+const { email, password } = texts.Errors.SignUp;
 
 
 const formSchema = object().shape({
   email: string()
-    .required(Email.required)
-    .email(Email.email),
+    .required(email.required)
+    .email(email.email),
   password: string()
-    .required(Password.required)
-    .min(6, Password.min),
-  repeatPassword: string().oneOf([ref("password")], Password.repeatPassword),
+    .required(password.required)
+    .min(6, password.min),
+  repeatPassword: string().oneOf([ref("password")], password.repeatPassword),
 });
 
 export const useSignUpForm = (
