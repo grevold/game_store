@@ -1,5 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { SignUpPage } from "./pages/SignUpPage/SignUpPage";
+import { SignInPage } from "./pages/SignInPage/SignInPage";
 import { RoutePath } from "./types";
 import { MainPage } from "./pages/MainPage/MainPage";
 import { CartPage } from "./pages/CartPage/CartPage";
@@ -13,6 +14,7 @@ function App() {
       <Nav />
       <Routes>
         <Route element={<CartPage />} path={RoutePath.CartPage} />
+        <Route element={<SignInPage />} path={RoutePath.SignInPage} />
         <Route element={<SignUpPage />} path={RoutePath.SignUpPage} />
         <Route element={<MainPage />} path={RoutePath.MainPage} />
         <Route element={<CatalogPage />} path={RoutePath.CatalogPage} />

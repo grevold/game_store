@@ -16,10 +16,15 @@
   color: white;
   text-decoration: none;
 }
+.title:hover{
+  text-decoration: underline;
+}
 .user {
   list-style: none;
   color: white;
   text-decoration: none;
   margin-left: 100px;
   font-family: "Proxima Nova";
+  display:flex;
+  gap:20px;
 }
