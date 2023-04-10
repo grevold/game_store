@@ -14,12 +14,26 @@ export const texts = {
 
             },
 
+        },
+        SignIn:
+        {
+            email:
+            {
+                required: "введите логин",
+                email: "такого логина не существует"
+            },
+            password: {
+                required: "введите пароль",
+                min: "минимальная длина пароля должна быть 6 символов",
+            },
+
         }
     },
     HeaderNav: {
         MainPage: "Главная",
         CatalogPage: "Каталог",
         NewsPage: "Новости",
-        SignUpPage: "Sign Up"
+        SignUpPage: "Sign Up",
+        SignInPage: "Sign In",
     }
 }
