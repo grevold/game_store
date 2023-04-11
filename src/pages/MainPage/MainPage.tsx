@@ -1,10 +1,8 @@
-
-import s from "./MainPage.module.css"
+import s from "./MainPage.module.css";
 export const MainPage = () => {
-    return (
-        <div className={s.root}>
-          
-            <h1>Главная страница</h1>
-        </div>
-    )
-}
+  return (
+    <div className={s.root}>
+      <h1>Главная страница</h1>
+    </div>
+  );
+};

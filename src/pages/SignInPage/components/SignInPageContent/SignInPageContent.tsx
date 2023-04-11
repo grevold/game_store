@@ -1,7 +1,6 @@
 import { firebaseApi } from "../../../../firebase/api";
 import { SignInForm } from "../SignInForm/SignInForm";
 
-
 import s from "./SignInPageContent.module.css";
 
 export const SignInPageContent = () => {
@@ -10,8 +9,6 @@ export const SignInPageContent = () => {
 
   return (
     <div className={s.root}>
-
-
       <SignInForm onSubmit={handleSubmit} />
     </div>
   );

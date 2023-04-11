@@ -16,5 +16,4 @@ export enum RoutePath {
   SignUpPage = "/sign-up",
   SignInPage = "/sign-in",
   CartPage = "/cart",
-
 }

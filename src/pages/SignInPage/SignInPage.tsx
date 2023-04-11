@@ -7,7 +7,7 @@ import { observer } from "mobx-react-lite";
 
 export const SignInPage = observer(() => {
   const userState = store.getUserState();
-  
+
   // Если юзер уже авторизован, то редиректим его с этой страницы.
   if (userState.status === UserAuthStatus.Authorized) {
     return <Navigate to={RoutePath.MainPage} />;
@@ -17,6 +17,6 @@ export const SignInPage = observer(() => {
   if (userState.status === UserAuthStatus.Unauthorized) {
     return <SignInPageContent />;
   }
-  
+
   return <Preloader />;
 });

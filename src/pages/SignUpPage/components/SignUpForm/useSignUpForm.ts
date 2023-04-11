@@ -10,19 +10,11 @@ export interface FormValues {
   repeatPassword: string;
 }
 
-
-
-
 const { email, password } = texts.Errors.SignUp;
 
-
 const formSchema = object().shape({
-  email: string()
-    .required(email.required)
-    .email(email.email),
-  password: string()
-    .required(password.required)
-    .min(6, password.min),
+  email: string().required(email.required).email(email.email),
+  password: string().required(password.required).min(6, password.min),
   repeatPassword: string().oneOf([ref("password")], password.repeatPassword),
 });
 
