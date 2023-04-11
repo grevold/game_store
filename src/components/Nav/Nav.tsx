@@ -6,6 +6,7 @@ import { CartIcon } from "../../icons/CartIcon";
 
 import s from "./Nav.module.css";
 import { observer } from "mobx-react-lite";
+import { firebaseApi } from "../../firebase/api";
 
 export const Nav = observer(() => {
   const { MainPage, CatalogPage, NewsPage, SignUpPage, SignInPage } =
@@ -41,6 +42,9 @@ export const Nav = observer(() => {
             <Link className={s.title} key={SignUpPage} to={RoutePath.CartPage}>
               <CartIcon />
             </Link>
+          </li>
+          <li>
+            <button onClick={()=>firebaseApi.signOut()} className={s.sign_out}>Sing Out</button>
           </li>
         </ul>
       </div>

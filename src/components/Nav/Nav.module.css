@@ -27,4 +27,15 @@
   font-family: "Proxima Nova";
   display: flex;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sign_out{
+  color: white;
+  text-decoration: none;
+  border: 0;
+  background: none;
+  cursor: pointer;
 }

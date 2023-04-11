@@ -33,5 +33,6 @@ export const texts = {
     NewsPage: "Новости",
     SignUpPage: "Sign Up",
     SignInPage: "Sign In",
+    SignOut: "SignOut"
   },
 };
