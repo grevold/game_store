@@ -5,14 +5,15 @@ import { Logo } from "../../../../icons/Logo";
 
 interface Props {
   onSubmit: (email: string, password: string) => void;
+  onClick: () => void;
 }
 
-export const SignInForm: React.FC<Props> = ({ onSubmit }) => {
+export const SignInForm: React.FC<Props> = ({ onSubmit, onClick }) => {
   const { submit, register, formState } = useSignInForm(onSubmit);
   const { errors } = formState;
 
   return (
-    <form onSubmit={submit} className={s.root}>
+    <form onSubmit={submit} onClick={onClick} className={s.root}>
       <div className={s.logo}>
         <Logo />
       </div>

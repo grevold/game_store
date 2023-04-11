@@ -1,15 +1,28 @@
-import { firebaseApi } from "../../../../firebase/api";
 import { SignInForm } from "../SignInForm/SignInForm";
+import { Status, useSignInPageContent } from "./useSignInPageContent";
+import { Preloader } from "../../../../components/Preloader/Preloader";
+import { texts } from "../../../../texts";
 
 import s from "./SignInPageContent.module.css";
 
 export const SignInPageContent = () => {
-  const handleSubmit = (email: string, password: string) =>
-    firebaseApi.signIn(email, password);
+  const { handleFormClick, handleSubmit, state } = useSignInPageContent();
+  const firebaseErrors: any = texts.Errors.SignIn.firebaseErrors;
+
+  if (state.status === Status.Loading) {
+    return <Preloader />;
+  }
 
   return (
     <div className={s.root}>
-      <SignInForm onSubmit={handleSubmit} />
+      <SignInForm onSubmit={handleSubmit} onClick={handleFormClick} />
+      {state.status === Status.Error && (
+        <span className={s.error}>
+          {firebaseErrors[state.errorCode]
+            ? firebaseErrors[state.errorCode]
+            : firebaseErrors.default}
+        </span>
+      )}
     </div>
   );
 };

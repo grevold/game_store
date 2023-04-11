@@ -20,6 +20,11 @@ export const texts = {
         required: "введите пароль",
         min: "минимальная длина пароля должна быть 6 символов",
       },
+      firebaseErrors: {
+        ["auth/user-not-found"]: "Пользователь с такими данными не найден.",
+        ["auth/network-request-failed"]: "Похоже, у вас проблемы с интернетом.",
+        default: "Что-то пошло не так.",
+      },
     },
   },
   HeaderNav: {
