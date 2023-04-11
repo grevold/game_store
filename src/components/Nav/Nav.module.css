@@ -16,7 +16,7 @@
   color: white;
   text-decoration: none;
 }
-.title:hover{
+.title:hover {
   text-decoration: underline;
 }
 .user {
@@ -25,6 +25,6 @@
   text-decoration: none;
   margin-left: 100px;
   font-family: "Proxima Nova";
-  display:flex;
-  gap:20px;
+  display: flex;
+  gap: 20px;
 }

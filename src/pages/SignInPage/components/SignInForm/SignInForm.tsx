@@ -1,7 +1,7 @@
 import { useSignInForm } from "./useSignInForm";
 import s from "./SignInForm.module.css";
 
-import { Logo } from "../../../../icons/Logo"
+import { Logo } from "../../../../icons/Logo";
 
 interface Props {
   onSubmit: (email: string, password: string) => void;
@@ -21,14 +21,22 @@ export const SignInForm: React.FC<Props> = ({ onSubmit }) => {
         <label className={s.label}>Логин</label>
         <input {...register("email")} type="email" className={s.input} />
       </div>
-      {errors.email?.message && <div className={s.error_message}>{errors.email?.message}</div>}
+      {errors.email?.message && (
+        <div className={s.error_message}>{errors.email?.message}</div>
+      )}
       <div className={s.data_row}>
         <label className={s.label}>Пароль</label>
         <input {...register("password")} type="password" className={s.input} />
       </div>
-      {errors.password?.message && <div className={s.error_message}>{errors.password?.message}</div>}
-      
-      <button disabled={!formState.isValid} type="submit" className={s.button_sign_up}>
+      {errors.password?.message && (
+        <div className={s.error_message}>{errors.password?.message}</div>
+      )}
+
+      <button
+        disabled={!formState.isValid}
+        type="submit"
+        className={s.button_sign_up}
+      >
         Войти
       </button>
     </form>
