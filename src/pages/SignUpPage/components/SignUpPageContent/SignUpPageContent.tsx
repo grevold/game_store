@@ -14,7 +14,6 @@ export const SignUpPageContent = () => {
   if (state.status === Status.Loading) {
     return <Preloader />;
   }
-  console.log(state)
 
 
   return (
