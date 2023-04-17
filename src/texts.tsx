@@ -10,6 +10,11 @@ export const texts = {
         min: "минимальная длина пароля должна быть 6 символов",
         repeatPassword: "пароли не совпадают",
       },
+      firebaseErrors: {
+        ["auth/email-already-in-use"]: "Пользователь с такими данными уже зарегестрирован.",
+        ["auth/network-request-failed"]: "Похоже, у вас проблемы с интернетом.",
+        default: "Что-то пошло не так.",
+      },
     },
     SignIn: {
       email: {
