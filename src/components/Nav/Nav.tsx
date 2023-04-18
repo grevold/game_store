@@ -25,7 +25,7 @@ export const Nav = observer(() => {
           <li>
             <Link
               className={s.title}
-              key={CatalogPage}
+
               to={RoutePath.CatalogPage}
             >
               {CatalogPage}
