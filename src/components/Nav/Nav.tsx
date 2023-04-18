@@ -18,7 +18,7 @@ export const Nav = observer(() => {
       <div className={s.root}>
         <ul className={s.navigation}>
           <li>
-            <Link className={s.title} key={MainPage} to={RoutePath.MainPage}>
+            <Link className={s.title} to={RoutePath.MainPage}>
               {MainPage}
             </Link>
           </li>
@@ -32,19 +32,19 @@ export const Nav = observer(() => {
             </Link>
           </li>
           <li>
-            <Link className={s.title} key={NewsPage} to={RoutePath.NewsPage}>
+            <Link className={s.title} to={RoutePath.NewsPage}>
               {NewsPage}
             </Link>
           </li>
         </ul>
         <ul className={s.user}>
           <li>
-            <Link className={s.title} key={AddProductPage} to={RoutePath.AddProductPage}>
+            <Link className={s.title} to={RoutePath.AddProductPage}>
               {AddProductPage}
             </Link>
           </li>
           <li>
-            <Link className={s.title} key={SignUpPage} to={RoutePath.CartPage}>
+            <Link className={s.title} to={RoutePath.CartPage}>
               <CartIcon />
             </Link>
           </li>
@@ -60,33 +60,33 @@ export const Nav = observer(() => {
     <div className={s.root}>
       <ul className={s.navigation}>
         <li>
-          <Link className={s.title} key={MainPage} to={RoutePath.MainPage}>
+          <Link className={s.title} to={RoutePath.MainPage}>
             {MainPage}
           </Link>
         </li>
         <li>
           <Link
             className={s.title}
-            key={CatalogPage}
+
             to={RoutePath.CatalogPage}
           >
             {CatalogPage}
           </Link>
         </li>
         <li>
-          <Link className={s.title} key={NewsPage} to={RoutePath.NewsPage}>
+          <Link className={s.title} to={RoutePath.NewsPage}>
             {NewsPage}
           </Link>
         </li>
       </ul>
       <ul className={s.user}>
         <li>
-          <Link className={s.title} key={SignInPage} to={RoutePath.SignInPage}>
+          <Link className={s.title} to={RoutePath.SignInPage}>
             {SignInPage}
           </Link>
         </li>
         <li>
-          <Link className={s.title} key={SignUpPage} to={RoutePath.SignUpPage}>
+          <Link className={s.title} to={RoutePath.SignUpPage}>
             {SignUpPage}
           </Link>
         </li>
