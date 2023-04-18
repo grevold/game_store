@@ -11,7 +11,8 @@ export const texts = {
         repeatPassword: "пароли не совпадают",
       },
       firebaseErrors: {
-        ["auth/email-already-in-use"]: "Пользователь с такими данными уже зарегестрирован.",
+        ["auth/email-already-in-use"]:
+          "Пользователь с такими данными уже зарегестрирован.",
         ["auth/network-request-failed"]: "Похоже, у вас проблемы с интернетом.",
         default: "Что-то пошло не так.",
       },
@@ -31,7 +32,7 @@ export const texts = {
         default: "Что-то пошло не так.",
       },
     },
-    AddProductError:"Заполните поле",
+    AddProductError: "Заполните поле",
   },
   HeaderNav: {
     MainPage: "Главная",
@@ -40,9 +41,20 @@ export const texts = {
     SignUpPage: "Sign Up",
     SignInPage: "Sign In",
     SignOut: "SignOut",
-    AddProductPage: "Добавить товар"
+    AddProductPage: "Добавить товар",
   },
   AddProduct: {
-    genres: ["Аркада", "Шутер", "Хоррор", "Action", "Симулятор", "Файтинг", "Платформер", "Стратегии", "RPG", "MMORPG"]
-  }
+    genres: [
+      "Аркада",
+      "Шутер",
+      "Хоррор",
+      "Action",
+      "Симулятор",
+      "Файтинг",
+      "Платформер",
+      "Стратегии",
+      "RPG",
+      "MMORPG",
+    ],
+  },
 };

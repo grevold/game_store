@@ -32,10 +32,35 @@
   text-align: center;
 }
 
-.sign_out{
+.sign_out {
   color: white;
   text-decoration: none;
   border: 0;
   background: none;
   cursor: pointer;
+}
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation_mobile {
+  display: none;
+}
+
+@media (max-width: 620px) {
+  .user {
+    margin-left: 20px;
+  }
+  .navigation_mobile {
+    display: block;
+    margin-right: 30px;
+  }
+  .navigation {
+    display: none;
+  }
+  .root {
+    justify-content: end;
+    align-items: center;
+  }
 }

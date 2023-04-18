@@ -6,7 +6,6 @@ import { Preloader } from "../../../../components/Preloader/Preloader";
 
 import s from "./SignUpPageContent.module.css";
 
-
 export const SignUpPageContent = () => {
   const { handleFormClick, handleSubmit, state } = useSignUpPageContent();
   const firebaseErrors: any = texts.Errors.SignUp.firebaseErrors;
@@ -15,10 +14,9 @@ export const SignUpPageContent = () => {
     return <Preloader />;
   }
 
-
   return (
     <div className={s.root}>
-      <SignUpForm onSubmit={handleSubmit}/>
+      <SignUpForm onSubmit={handleSubmit} />
       {state.status === Status.Error && (
         <span className={s.error}>
           {firebaseErrors[state.errorCode]
