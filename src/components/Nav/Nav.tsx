@@ -9,7 +9,7 @@ import { observer } from "mobx-react-lite";
 import { firebaseApi } from "../../firebase/api";
 
 export const Nav = observer(() => {
-  const { MainPage, CatalogPage, NewsPage, SignUpPage, SignInPage } =
+  const { MainPage, CatalogPage, NewsPage, SignUpPage, SignInPage, AddProductPage } =
     texts.HeaderNav;
   const userState = store.getUserState();
 
@@ -39,12 +39,17 @@ export const Nav = observer(() => {
         </ul>
         <ul className={s.user}>
           <li>
+            <Link className={s.title} key={AddProductPage} to={RoutePath.AddProductPage}>
+              {AddProductPage}
+            </Link>
+          </li>
+          <li>
             <Link className={s.title} key={SignUpPage} to={RoutePath.CartPage}>
               <CartIcon />
             </Link>
           </li>
           <li>
-            <button onClick={()=>firebaseApi.signOut()} className={s.sign_out}>Sing Out</button>
+            <button onClick={() => firebaseApi.signOut()} className={s.sign_out}>Sing Out</button>
           </li>
         </ul>
       </div>

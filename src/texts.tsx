@@ -31,6 +31,7 @@ export const texts = {
         default: "Что-то пошло не так.",
       },
     },
+    AddProductError:"Заполните поле",
   },
   HeaderNav: {
     MainPage: "Главная",
@@ -38,6 +39,10 @@ export const texts = {
     NewsPage: "Новости",
     SignUpPage: "Sign Up",
     SignInPage: "Sign In",
-    SignOut: "SignOut"
+    SignOut: "SignOut",
+    AddProductPage: "Добавить товар"
   },
+  AddProduct: {
+    genres: ["Аркада", "Шутер", "Хоррор", "Action", "Симулятор", "Файтинг", "Платформер", "Стратегии", "RPG", "MMORPG"]
+  }
 };
