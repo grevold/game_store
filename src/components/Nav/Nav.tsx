@@ -12,7 +12,6 @@ import { NavMobile } from "./components/NavMobile/NavMobile";
 
 export const Nav = observer(() => {
   const userState = store.getUserState();
-  // userState.status === UserAuthStatus.Authorized
   return (
     <>
       <NavDesktop status={userState.status} />
