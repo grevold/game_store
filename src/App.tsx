@@ -12,7 +12,7 @@ import { AddProductPage } from "./pages/AddProductPage/AddProductPage";
 function App() {
   return (
     <Router>
-      {/* <Nav /> */}
+      <Nav />
       <Routes>
         <Route element={<CartPage />} path={RoutePath.CartPage} />
         <Route element={<SignInPage />} path={RoutePath.SignInPage} />
@@ -21,7 +21,6 @@ function App() {
         <Route element={<CatalogPage />} path={RoutePath.CatalogPage} />
         <Route element={<NewsPage />} path={RoutePath.NewsPage} />
         <Route element={<AddProductPage />} path={RoutePath.AddProductPage} />
-        
       </Routes>
     </Router>
   );

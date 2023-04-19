@@ -8,18 +8,17 @@ import { Preloader } from "../../components/Preloader/Preloader";
 import { AddProductPageContent } from "./components/AddProductPageContent/AddProductPageContent";
 
 export const AddProductPage = observer(() => {
-    const userState = store.getUserState();
+  const userState = store.getUserState();
 
-    if (userState.status === UserAuthStatus.Unauthorized) {
-        return <Navigate to={RoutePath.MainPage} />;
-    }
-    if (userState.status === UserAuthStatus.Authorized) {
-        return (
-            <div className={s.root}>
-                <AddProductPageContent />
-            </div>
-        )
-    }
-    return <Preloader />;
-
+  if (userState.status === UserAuthStatus.Unauthorized) {
+    return <Navigate to={RoutePath.MainPage} />;
+  }
+  if (userState.status === UserAuthStatus.Authorized) {
+    return (
+      <div className={s.root}>
+        <AddProductPageContent />
+      </div>
+    );
+  }
+  return <Preloader />;
 });
