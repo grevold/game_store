@@ -37,24 +37,19 @@ export const NavDesktop: React.FC<Props> = ({ status }) => {
       </div>
     );
   }
-
-  if (status === UserAuthStatus.Unauthorized) {
-    return (
-      <div className={s.root}>
-        <div className={s.navigation}>
-          <ul className={s.navigation}>
-            {unauthorized.map((navTitle) => (
-              <li>
-                <Link className={s.title} to={navTitle.path}>
-                  {navTitle.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+  return (
+    <div className={s.root}>
+      <div className={s.navigation}>
+        <ul className={s.navigation}>
+          {unauthorized.map((navTitle) => (
+            <li>
+              <Link className={s.title} to={navTitle.path}>
+                {navTitle.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
-    );
-  }
-
-  return <div />;
+    </div>
+  );
 };
