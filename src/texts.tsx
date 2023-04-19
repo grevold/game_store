@@ -1,3 +1,5 @@
+import { RoutePath } from "./types";
+
 export const texts = {
   Errors: {
     SignUp: {
@@ -34,15 +36,6 @@ export const texts = {
     },
     AddProductError: "Заполните поле",
   },
-  HeaderNav: {
-    MainPage: "Главная",
-    CatalogPage: "Каталог",
-    NewsPage: "Новости",
-    SignUpPage: "Sign Up",
-    SignInPage: "Sign In",
-    SignOut: "SignOut",
-    AddProductPage: "Добавить товар",
-  },
   AddProduct: {
     genres: [
       "Аркада",
@@ -55,6 +48,53 @@ export const texts = {
       "Стратегии",
       "RPG",
       "MMORPG",
+    ],
+  },
+  Navigation: {
+    authorized: [
+      {
+        title: "Главная",
+        path: RoutePath.MainPage,
+      },
+      {
+        title: "Каталог",
+        path: RoutePath.CatalogPage,
+      },
+      {
+        title: "Новости",
+        path: RoutePath.NewsPage,
+      },
+
+      {
+        title: "Добавить товар",
+        path: RoutePath.AddProductPage,
+      },
+      {
+        title: "Корзина",
+        path: RoutePath.CartPage,
+      },
+    ],
+    unauthorized: [
+      {
+        title: "Главная",
+        path: RoutePath.MainPage,
+      },
+      {
+        title: "Каталог",
+        path: RoutePath.CatalogPage,
+      },
+      {
+        title: "Новости",
+        path: RoutePath.NewsPage,
+      },
+      {
+        title: "Sign Up",
+        path: RoutePath.SignUpPage,
+      },
+      {
+        title: "Sign In",
+        path: RoutePath.SignInPage,
+      },
     ],
   },
 };
