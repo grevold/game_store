@@ -11,16 +11,16 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  margin-left: 30px;
   margin-top: 50px;
 }
 
 .link {
+  display: flex;
   color: white;
   text-decoration: none;
   font-size: 24px;
   font-family: "Proxima Nova";
+  padding: 15px 30px;
 }
 
 .burgerIconClose {
