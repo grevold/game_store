@@ -18,3 +18,8 @@ export enum RoutePath {
   CartPage = "/cart",
   AddProductPage = "/add-product",
 }
+
+export interface NavRoute {
+  title: string;
+  path: RoutePath;
+}
