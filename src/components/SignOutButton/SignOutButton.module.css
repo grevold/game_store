@@ -1,0 +1,12 @@
+.root {
+  color: white;
+  text-decoration: none;
+  font-family: "Proxima Nova";
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+.root:hover {
+  text-decoration: underline;
+}
