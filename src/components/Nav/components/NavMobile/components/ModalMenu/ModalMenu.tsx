@@ -7,6 +7,7 @@ import { UserAuthStatus } from "../../../../../../types";
 import { SignOutButton } from "../../../../../SignOutButton/SignOutButton";
 import { BurgerIconClose } from "../../../../../../icons/BurgerIconClose";
 import ScrollLock from "react-scrolllock";
+import { useClickOutsideListener } from "../../../../../../hooks/useClickOutsideListener";
 
 import s from "./ModalMenu.module.css";
 
@@ -18,12 +19,13 @@ interface Props {
 export const ModalMenu: React.FC<Props> = observer(({ className, onClose }) => {
   const userState = store.getUserState();
   const routes = mapUserStateToRoutes(userState);
+  const ref = useClickOutsideListener<HTMLUListElement>(onClose);
 
   return (
     <ScrollLock>
       <div className={cn(s.root, className)}>
-        <BurgerIconClose className={s.burgerIconClose} onClick={onClose} />
-        <ul className={s.menu}>
+        <BurgerIconClose className={s.burgerIconClose} />
+        <ul ref={ref} className={s.menu}>
           {routes.map(({ title, path }) => (
             <li>
               <Link key={title} className={s.link} to={path} onClick={onClose}>
