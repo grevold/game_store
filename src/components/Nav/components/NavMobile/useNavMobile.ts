@@ -2,13 +2,7 @@ import { useState } from "react";
 
 export const useNavMobile = () => {
   const [state, setState] = useState(false);
+  const handleClick = () => setState((prevState) => !prevState);
 
-  function tapBurger(prevState: boolean) {
-    setState((prevState) => !prevState);
-  }
-  function closeMenu(prevState: boolean) {
-    setState((prevState) => !prevState);
-  }
-
-  return { tapBurger, closeMenu, state };
+  return { state, handleClick };
 };

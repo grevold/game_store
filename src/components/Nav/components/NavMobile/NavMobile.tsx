@@ -13,7 +13,7 @@ interface Props {
 }
 
 export const NavMobile: React.FC<Props> = ({ userState, routes }) => {
-  const { tapBurger, closeMenu, state } = useNavMobile();
+  const { state, handleClick } = useNavMobile();
 
   return (
     <div className={state ? s.root_open : s.root_close}>
@@ -21,7 +21,7 @@ export const NavMobile: React.FC<Props> = ({ userState, routes }) => {
         className={
           state ? s.button_mobile_menu_open : s.button_mobile_menu_close
         }
-        onClick={() => tapBurger(state)}
+        onClick={handleClick}
       >
         {state ? <BurgerIconClose /> : <BurgerIcon />}
       </button>
@@ -32,7 +32,7 @@ export const NavMobile: React.FC<Props> = ({ userState, routes }) => {
               key={title}
               className={s.title}
               to={path}
-              onClick={() => closeMenu(state)}
+              onClick={handleClick}
             >
               {title}
             </Link>
