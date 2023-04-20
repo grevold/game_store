@@ -1,64 +1,12 @@
-.button_burger {
-  background: none;
-  border: 0;
-}
-.root_close {
-  display: none;
-}
-.root_open {
-  display: none;
+.root {
+  height: 40px;
+  background-color: #9146ff;
+  position: relative;
 }
 
-@media (max-width: 620px) {
-  .root_open {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    background-color: #9146ff;
-  }
-  .root_close {
-    display: flex;
-    width: 100%;
-    height: 50px;
-    background-color: #9146ff;
-    justify-content: end;
-    padding-right: 30px;
-  }
-  .button_mobile_menu_open {
-    background-color: rgba(0, 0, 0, 0);
-    border: 0;
-    display: flex;
-    justify-content: end;
-    padding-right: 30px;
-    padding-top: 15px;
-  }
-  .button_mobile_menu_close {
-    background-color: rgba(0, 0, 0, 0);
-    border: 0;
-  }
-  .mobile_menu {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-left: 30px;
-    margin-top: 50px;
-  }
-  .mobile_menu_close {
-    display: none;
-  }
-  .title {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    font-family: "Proxima Nova";
-  }
-  .sign_out {
-    composes: title;
-    background-color: rgba(0, 0, 0, 0);
-    border: 0;
-    display: flex;
-    justify-content: start;
-  }
+.burgerIcon {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translate(0, -50%);
 }

@@ -1,6 +1,13 @@
-export function BurgerIcon() {
+interface Props {
+  className?: string;
+  onClick?: () => void;
+}
+
+export function BurgerIcon({ className, onClick }: Props) {
   return (
     <svg
+      onClick={onClick}
+      className={className}
       width="27"
       height="16"
       viewBox="0 0 27 16"
