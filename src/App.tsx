@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { SignUpPage } from "./pages/SignUpPage/SignUpPage";
 import { SignInPage } from "./pages/SignInPage/SignInPage";
 import { RoutePath } from "./types";
@@ -11,18 +11,18 @@ import { AddProductPage } from "./pages/AddProductPage/AddProductPage";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Nav />
       <Routes>
         <Route element={<CartPage />} path={RoutePath.CartPage} />
         <Route element={<SignInPage />} path={RoutePath.SignInPage} />
         <Route element={<SignUpPage />} path={RoutePath.SignUpPage} />
-        <Route element={<MainPage />} path={RoutePath.MainPage} />
         <Route element={<CatalogPage />} path={RoutePath.CatalogPage} />
         <Route element={<NewsPage />} path={RoutePath.NewsPage} />
         <Route element={<AddProductPage />} path={RoutePath.AddProductPage} />
+        <Route element={<MainPage />} path="*" />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
