@@ -96,6 +96,15 @@ class FirebaseApi {
     const src = await getDownloadURL(storageRef);
     return { id, src };
   }
+
+  /**
+   * Загружает картинки в хранилище firebase.
+   * @param images - объекты, описывающие картинки.
+   */
+  public async uploadImages(images: File[]): Promise<ImageInFirebaseStore[]> {
+    const promises = images.map((image) => this.uploadImage(image));
+    return Promise.all(promises);
+  }
 }
 
 export const firebaseApi = new FirebaseApi();
