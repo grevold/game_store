@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { firebaseApi } from "../../../../firebase/api";
+import { AddProductFormValues } from "../AddProductForm/useAddProductForm";
 
 export enum Status {
   Init = "Init",
@@ -21,15 +22,8 @@ export const useAddProductPageContent = () => {
     status: Status.Init,
   });
 
-  const handleSubmit = (
-    name: string,
-    genre: string,
-    developer: string,
-    label: string,
-    description: string,
-    price: number
-  ) => {
-    console.log(name, genre, developer, label, description, price);
+  const handleSubmit = (addProductFormValues: AddProductFormValues) => {
+    console.log(addProductFormValues);
   };
 
   const handleFormClick = () => {
