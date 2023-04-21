@@ -11,7 +11,14 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { store } from "../store";
-import { UserAuthStatus } from "../types";
+import { ImageInFirebaseStore, UserAuthStatus } from "../types";
+import { v4 } from "uuid";
+import {
+  getStorage,
+  ref as storeRef,
+  uploadBytes,
+  getDownloadURL,
+} from "firebase/storage";
 
 class FirebaseApi {
   private readonly auth: Auth;
@@ -75,6 +82,19 @@ class FirebaseApi {
         status: UserAuthStatus.Unauthorized,
       });
     }
+  }
+
+  /**
+   * Загружает картинку в хранилище firebase.
+   * @param image - объект, описывающий картинку.
+   */
+  public async uploadImage(image: File): Promise<ImageInFirebaseStore> {
+    const id = v4();
+    const storage = getStorage();
+    const storageRef = storeRef(storage, `images/${id}`);
+    await uploadBytes(storageRef, image);
+    const src = await getDownloadURL(storageRef);
+    return { id, src };
   }
 }
 

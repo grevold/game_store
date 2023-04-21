@@ -1,22 +1,17 @@
+import { ImagesUploader } from "../../../../components/ImagesUploader/ImagesUploader";
+import { AddProductFormValues, useAddProductForm } from "./useAddProductForm";
 import { texts } from "../../../../texts";
-import { useAddProductForm } from "./useAddProductForm";
+import { Controller } from "react-hook-form";
 
 import s from "./AddProductForm.module.css";
 
 interface Props {
-  onSubmit: (
-    name: string,
-    genre: string,
-    developer: string,
-    label: string,
-    description: string,
-    price: number
-  ) => void;
+  onSubmit: (addProductFormValues: AddProductFormValues) => void;
 }
 
 export const AddProductForm: React.FC<Props> = ({ onSubmit }) => {
   const { genres } = texts.AddProduct;
-  const { submit, register, formState } = useAddProductForm(onSubmit);
+  const { submit, register, formState, control } = useAddProductForm(onSubmit);
 
   return (
     <form className={s.root} onSubmit={submit}>
@@ -50,19 +45,17 @@ export const AddProductForm: React.FC<Props> = ({ onSubmit }) => {
             <h2>Цена, ₽</h2>
             <input {...register("price")} className={s.input}></input>
           </div>
-          {/* <div>
-            <h2>Скидка, %</h2>
-            <input {...register("discount")} className={s.input}></input>
-          </div>
-          <div>
-            <h2>Итог, ₽</h2>
-            <input
-              className={s.input_discount}
-
-            ></input>
-          </div> */}
         </div>
-        <button className={s.button_add}>Добавить</button>
+        <Controller
+          name="images"
+          control={control}
+          render={({ field: { onChange } }) => (
+            <ImagesUploader onSelect={onChange} className={s.imagesUploader} />
+          )}
+        />
+        <button className={s.button_add} type="submit">
+          Добавить
+        </button>
       </div>
     </form>
   );

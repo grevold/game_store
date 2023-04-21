@@ -23,3 +23,8 @@ export interface NavRoute {
   title: string;
   path: RoutePath;
 }
+
+export interface ImageInFirebaseStore {
+  src: string;
+  id: string;
+}
