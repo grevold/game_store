@@ -129,25 +129,44 @@ class FirebaseApi {
   }
 
   /**
+   * Скачивает массив всех продуктов.
+   */
+  public async fetchAllProducts(): Promise<Product[]> {
+    const dbRef = databaseRef(getDatabase());
+    const snapshot = await get(child(dbRef, `products`));
+    if (!snapshot.exists()) {
+      throw new Error("Не удалось скачать продукты");
+    }
+    const snapshotVal: Record<string, any> = snapshot.val();
+    const products: Product[] = Object.entries(snapshotVal).map(
+      ([id, productData]) => ({
+        ...productData,
+        id,
+      })
+    );
+    return products;
+  }
+
+  /**
    * Скачивает данные продукта по его айдишнику из базы данных и возвращает их.
    * @param productId - айдишник продукта.
    */
-  public async fetchProductData(
-    productId: string
-  ): Promise<Product | undefined> {
-    const dbRef = databaseRef(getDatabase());
-    const snapshot = await get(child(dbRef, `products/${productId}`));
-    if (!snapshot.exists()) {
-      return undefined;
-    }
-    const product = snapshot.val();
-    const images = product.images || [];
-    return {
-      ...product,
-      id: productId,
-      images,
-    };
-  }
+  // public async fetchProductData(
+  //   productId: string
+  // ): Promise<Product | undefined> {
+  //   const dbRef = databaseRef(getDatabase());
+  //   const snapshot = await get(child(dbRef, `products/${productId}`));
+  //   if (!snapshot.exists()) {
+  //     return undefined;
+  //   }
+  //   const product = snapshot.val();
+  //   const images = product.images || [];
+  //   return {
+  //     ...product,
+  //     id: productId,
+  //     images,
+  //   };
+  // }
 }
 
 export const firebaseApi = new FirebaseApi();

@@ -30,6 +30,7 @@ export interface ImageInFirebaseStore {
 }
 
 export interface Product {
+  id: string;
   name: string;
   developer: string;
   label: string;
