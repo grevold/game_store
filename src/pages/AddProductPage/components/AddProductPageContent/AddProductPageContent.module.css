@@ -5,3 +5,11 @@
   justify-content: center;
   align-items: center;
 }
+
+.successMessage {
+  color: green;
+}
+
+.errorMessage {
+  color: red;
+}

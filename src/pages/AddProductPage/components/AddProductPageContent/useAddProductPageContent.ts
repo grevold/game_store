@@ -6,11 +6,12 @@ export enum Status {
   Init = "Init",
   Loading = "Loading",
   Error = "Error",
+  Success = "Success",
 }
 
 type State =
   | {
-      status: Status.Init | Status.Loading;
+      status: Status.Init | Status.Loading | Status.Success;
     }
   | {
       status: Status.Error;
@@ -23,7 +24,22 @@ export const useAddProductPageContent = () => {
   });
 
   const handleSubmit = (addProductFormValues: AddProductFormValues) => {
-    console.log(addProductFormValues);
+    setState({
+      status: Status.Loading,
+    });
+    firebaseApi.addProduct(addProductFormValues).then(
+      () => {
+        setState({
+          status: Status.Success,
+        });
+      },
+      (error: any) => {
+        setState({
+          status: Status.Error,
+          errorCode: error.code,
+        });
+      }
+    );
   };
 
   const handleFormClick = () => {

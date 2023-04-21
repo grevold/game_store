@@ -1,5 +1,11 @@
 import { FirebaseApp } from "@firebase/app-types";
-import { getDatabase, ref as databaseRef, set } from "firebase/database";
+import {
+  getDatabase,
+  ref as databaseRef,
+  set,
+  get,
+  child,
+} from "firebase/database";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "./config";
 import {
@@ -11,7 +17,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { store } from "../store";
-import { ImageInFirebaseStore, UserAuthStatus } from "../types";
+import { ImageInFirebaseStore, Product, UserAuthStatus } from "../types";
 import { v4 } from "uuid";
 import {
   getStorage,
@@ -19,6 +25,7 @@ import {
   uploadBytes,
   getDownloadURL,
 } from "firebase/storage";
+import { AddProductFormValues } from "../pages/AddProductPage/components/AddProductForm/useAddProductForm";
 
 class FirebaseApi {
   private readonly auth: Auth;
@@ -104,6 +111,42 @@ class FirebaseApi {
   public async uploadImages(images: File[]): Promise<ImageInFirebaseStore[]> {
     const promises = images.map((image) => this.uploadImage(image));
     return Promise.all(promises);
+  }
+
+  /**
+   * Записывает данные о продукте в базу данных.
+   * @param productData - данные продукта из формы создания новых продуктов.
+   */
+  public async addProduct(productData: AddProductFormValues): Promise<void> {
+    const productId = v4();
+    const database = getDatabase();
+    const images = await this.uploadImages(productData.images);
+    const product = {
+      ...productData,
+      images,
+    };
+    await set(databaseRef(database, `products/${productId}`), product);
+  }
+
+  /**
+   * Скачивает данные продукта по его айдишнику из базы данных и возвращает их.
+   * @param productId - айдишник продукта.
+   */
+  public async fetchProductData(
+    productId: string
+  ): Promise<Product | undefined> {
+    const dbRef = databaseRef(getDatabase());
+    const snapshot = await get(child(dbRef, `products/${productId}`));
+    if (!snapshot.exists()) {
+      return undefined;
+    }
+    const product = snapshot.val();
+    const images = product.images || [];
+    return {
+      ...product,
+      id: productId,
+      images,
+    };
   }
 }
 
