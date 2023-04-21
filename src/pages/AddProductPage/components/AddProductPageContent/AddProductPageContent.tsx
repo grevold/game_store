@@ -14,13 +14,16 @@ export const AddProductPageContent = () => {
 
   return (
     <div className={s.root}>
-      <AddProductForm onSubmit={handleSubmit} />
+      <AddProductForm onSubmit={handleSubmit} onClick={handleFormClick} />
       {state.status === Status.Error && (
-        <span className={s.error}>
+        <span className={s.errorMessage}>
           {firebaseErrors[state.errorCode]
             ? firebaseErrors[state.errorCode]
             : firebaseErrors.default}
         </span>
+      )}
+      {state.status === Status.Success && (
+        <span className={s.successMessage}>Товар успешно создан!</span>
       )}
     </div>
   );

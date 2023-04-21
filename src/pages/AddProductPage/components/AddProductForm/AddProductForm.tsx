@@ -7,14 +7,15 @@ import s from "./AddProductForm.module.css";
 
 interface Props {
   onSubmit: (addProductFormValues: AddProductFormValues) => void;
+  onClick: () => void;
 }
 
-export const AddProductForm: React.FC<Props> = ({ onSubmit }) => {
+export const AddProductForm: React.FC<Props> = ({ onSubmit, onClick }) => {
   const { genres } = texts.AddProduct;
   const { submit, register, formState, control } = useAddProductForm(onSubmit);
 
   return (
-    <form className={s.root} onSubmit={submit}>
+    <form className={s.root} onSubmit={submit} onClick={onClick}>
       <h1 className={s.header}>Добавление товара</h1>
       <div className={s.container}>
         <h2>Название</h2>

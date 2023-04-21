@@ -28,3 +28,13 @@ export interface ImageInFirebaseStore {
   src: string;
   id: string;
 }
+
+export interface Product {
+  name: string;
+  developer: string;
+  label: string;
+  description: string;
+  price: number;
+  genre: string;
+  images: ImageInFirebaseStore[];
+}
