@@ -1,0 +1,39 @@
+.root {
+  width: 200px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Proxima Nova";
+  color: white;
+  cursor: pointer;
+}
+.image {
+  width: 200px;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border: none;
+}
+.image:hover {
+  filter: brightness(120%);
+}
+.game_info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+.genre {
+  color: rgb(167, 167, 167);
+  font-size: 14px;
+}
+.name {
+  font-size: 16px;
+  height: 40px;
+}
+.price {
+  font-size: 18px;
+  font-weight: 400;
+}
