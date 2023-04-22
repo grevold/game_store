@@ -12,27 +12,21 @@ export enum Status {
 
 type State =
   | {
-      status: Status.Error;
-      data: [];
+      status: Status.Loading | Status.Error;
     }
   | {
       status: Status.Success;
       data: Product[];
-    }
-  | {
-      status: Status.Loading;
-      data: [];
     };
 
 export function useProductsList() {
   const [state, setState] = useState<State>({
     status: Status.Loading,
-    data: [],
   });
   useEffect(() => {
     firebaseApi.fetchAllProducts().then(
       (data) => setState({ status: Status.Success, data: [...data] }),
-      () => setState({ status: Status.Error, data: [] })
+      () => setState({ status: Status.Error })
     );
   }, []);
   return { state };

@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* border: 1px solid white; */
   font-family: "Proxima Nova";
   color: white;
   cursor: pointer;
