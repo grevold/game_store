@@ -16,7 +16,7 @@ type State =
     }
   | {
       status: Status.Success;
-      data: Product[];
+      products: Product[];
     };
 
 export function useProductsList() {
@@ -25,7 +25,7 @@ export function useProductsList() {
   });
   useEffect(() => {
     firebaseApi.fetchAllProducts().then(
-      (data) => setState({ status: Status.Success, data: [...data] }),
+      (products) => setState({ status: Status.Success, products }),
       () => setState({ status: Status.Error })
     );
   }, []);
