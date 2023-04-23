@@ -3,3 +3,28 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.swiper {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  border: 0;
+
+  /* Center slide text vertically */
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 400px) {
+  .swiper {
+    max-width: none;
+  }
+  .swiper-slide {
+    display: flex;
+  }
+}

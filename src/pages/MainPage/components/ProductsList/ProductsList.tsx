@@ -2,6 +2,10 @@ import { useProductsList } from "./useProductsList";
 import { Preloader } from "../../../../components/Preloader/Preloader";
 import { Status } from "./useProductsList";
 import { ProductCard } from "./components/ProductCard/ProductCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 import s from "./ProductsList.module.css";
 
@@ -10,19 +14,24 @@ export const ProductsList = () => {
 
   if (state.status === Status.Success) {
     return (
-      <div className={s.container}>
-        <div className={s.buttons}>
-          <button className={s.button}>←</button>
-          <button className={s.button}>→</button>
-        </div>
-        <ul className={s.row_products}>
-          {state.data.map((product) => (
-            <li key={product.id} className={s.product}>
-              <ProductCard productData={product} />
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Swiper
+        breakpoints={{
+          400: {
+            slidesPerView: 1,
+            spaceBetween: 50,
+          },
+          999: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        }}
+      >
+        {state.data.map((product) => (
+          <SwiperSlide>
+            <ProductCard productData={product} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     );
   }
 
