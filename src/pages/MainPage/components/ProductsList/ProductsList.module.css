@@ -18,7 +18,8 @@
   padding: 0;
   position: absolute;
   transition: left linear 1s;
-  margin-top: 50px;
+
+  left: -200px;
 }
 .product {
   width: 200px;
@@ -33,6 +34,24 @@
   gap: 5px;
   position: absolute;
   z-index: 1;
+}
+.buttons_box {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+.button_next {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+}
+.button_next:hover {
+  background: #535353;
 }
 .button {
   width: 40px;

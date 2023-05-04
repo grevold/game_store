@@ -10,7 +10,15 @@ export const ProductsList = () => {
   const { state } = useProductsList();
 
   if (state.status === Status.Success) {
-    return <ProductsSlider products={state.products} />;
+    return (
+      <div>
+        <div className={s.buttons_box}>
+          <button className={s.button_next}>←</button>
+          <button className={s.button_next}>→</button>
+        </div>
+        <ProductsSlider products={state.products} />
+      </div>
+    );
   }
 
   if (state.status === Status.Error) {

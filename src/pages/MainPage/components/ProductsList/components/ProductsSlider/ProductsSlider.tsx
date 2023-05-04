@@ -1,6 +1,7 @@
 import { Product } from "../../../../../../types";
 import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
 import { ProductCard } from "../ProductCard/ProductCard";
+import s from "./ProductSlider.module.css";
 
 interface Props {
   products: Product[];
@@ -21,7 +22,7 @@ const swiperConfig: SwiperProps = {
 
 export const ProductsSlider: React.FC<Props> = ({ products }) => {
   return (
-    <Swiper {...swiperConfig}>
+    <Swiper {...swiperConfig} className={s.swiper}>
       {products.map((product) => (
         <SwiperSlide key={product.id}>
           <ProductCard productData={product} />
