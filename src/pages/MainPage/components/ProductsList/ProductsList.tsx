@@ -11,7 +11,7 @@ export const ProductsList = () => {
 
   if (state.status === Status.Success) {
     return (
-      <div>
+      <div className={s.container}>
         <div className={s.buttons_box}>
           <button className={s.button_next}>←</button>
           <button className={s.button_next}>→</button>

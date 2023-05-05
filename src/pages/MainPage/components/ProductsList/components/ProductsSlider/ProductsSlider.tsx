@@ -22,7 +22,7 @@ const swiperConfig: SwiperProps = {
 
 export const ProductsSlider: React.FC<Props> = ({ products }) => {
   return (
-    <Swiper {...swiperConfig} className={s.swiper}>
+    <Swiper {...swiperConfig}>
       {products.map((product) => (
         <SwiperSlide key={product.id}>
           <ProductCard productData={product} />

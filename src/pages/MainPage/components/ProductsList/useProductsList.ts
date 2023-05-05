@@ -26,7 +26,10 @@ export function useProductsList() {
   useEffect(() => {
     firebaseApi.fetchAllProducts().then(
       (products) => setState({ status: Status.Success, products }),
-      () => setState({ status: Status.Error })
+      (error) => {
+        console.log(error);
+        setState({ status: Status.Error });
+      }
     );
   }, []);
   return { state };
