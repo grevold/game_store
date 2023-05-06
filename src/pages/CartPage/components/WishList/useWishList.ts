@@ -1,6 +1,5 @@
-import { useEffect } from "react";
 import { firebaseApi } from "../../../../firebase/api";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Product } from "../../../../types";
 
 export enum Status {
@@ -19,17 +18,16 @@ type State =
       products: Product[];
     };
 
-export function useProductsList() {
+export function useWishList() {
   const [state, setState] = useState<State>({
     status: Status.Loading,
   });
   useEffect(() => {
     firebaseApi.fetchAllProducts().then(
       (products) => setState({ status: Status.Success, products }),
-      (error) => {
-        setState({ status: Status.Error });
-      }
+      () => setState({ status: Status.Error })
     );
   }, []);
+
   return { state };
 }

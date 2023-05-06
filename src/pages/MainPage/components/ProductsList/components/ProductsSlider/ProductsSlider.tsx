@@ -1,6 +1,7 @@
 import { Product } from "../../../../../../types";
 import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
 import { ProductCard } from "../ProductCard/ProductCard";
+import s from "./ProductSlider.module.css";
 
 interface Props {
   products: Product[];

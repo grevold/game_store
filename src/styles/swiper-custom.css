@@ -1,6 +1,8 @@
 .swiper {
   width: 100%;
-  max-width: 1000px;
+}
+.swiper:hover {
+  cursor: pointer;
 }
 
 .swiper-slide {
@@ -16,7 +18,7 @@
 
 @media (max-width: 400px) {
   .swiper {
-    max-width: none;
+    width: 100%;
   }
   .swiper-slide {
     display: flex;
