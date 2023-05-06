@@ -27,7 +27,6 @@ export function useProductsList() {
     firebaseApi.fetchAllProducts().then(
       (products) => setState({ status: Status.Success, products }),
       (error) => {
-        console.log(error);
         setState({ status: Status.Error });
       }
     );

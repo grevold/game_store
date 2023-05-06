@@ -6,7 +6,6 @@ interface Props {
 }
 
 export const CartProduct: React.FC<Props> = ({ product }) => {
-  console.log(product);
   return (
     <div className={s.root}>
       <div

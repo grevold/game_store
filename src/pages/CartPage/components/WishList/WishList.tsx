@@ -10,11 +10,13 @@ export const WishList = () => {
 
   if (state.status === Status.Success) {
     return (
-      <div className={s.root}>
+      <ul className={s.root}>
         {state.products.map((product) => (
-          <CartProduct product={product} key={product.id} />
+          <li>
+            <CartProduct product={product} key={product.id} />
+          </li>
         ))}
-      </div>
+      </ul>
     );
   }
 
