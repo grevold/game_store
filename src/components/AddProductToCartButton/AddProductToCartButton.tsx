@@ -22,9 +22,7 @@ export const AddProductToCartButton: React.FC<Props> = observer(
     if (state.status === Status.NeedToSignIn) {
       return (
         <Link to={RoutePath.SignInPage}>
-          <button onClick={addProductToCart} className={s.button}>
-            Добавить в корзину
-          </button>
+          <button className={s.button}>Добавить в корзину</button>
         </Link>
       );
     }
