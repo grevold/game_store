@@ -1,7 +1,8 @@
 import { Product } from "../../../../../../types";
 import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
 import { ProductCard } from "../ProductCard/ProductCard";
-import s from "./ProductSlider.module.css";
+import { Navigation } from "swiper";
+import { useProductSlider } from "./useProductSlider";
 
 interface Props {
   products: Product[];
@@ -18,9 +19,13 @@ const swiperConfig: SwiperProps = {
       spaceBetween: 50,
     },
   },
+  navigation: true,
+  modules: [Navigation],
 };
 
 export const ProductsSlider: React.FC<Props> = ({ products }) => {
+  useProductSlider();
+
   return (
     <Swiper {...swiperConfig}>
       {products.map((product) => (
