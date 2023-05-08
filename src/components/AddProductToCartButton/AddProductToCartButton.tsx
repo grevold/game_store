@@ -4,6 +4,7 @@ import { store } from "../../store";
 import s from "./AddProductToCartButton.module.css";
 import { Preloader } from "../Preloader/Preloader";
 import { Link } from "react-router-dom";
+import { RoutePath } from "../../types";
 
 interface Props {
   productId: string;
@@ -20,7 +21,7 @@ export const AddProductToCartButton: React.FC<Props> = observer(
 
     if (state.status === Status.NeedToSignIn) {
       return (
-        <Link to={"/sign-in"}>
+        <Link to={RoutePath.SignInPage}>
           <button onClick={addProductToCart} className={s.button}>
             Добавить в корзину
           </button>
