@@ -1,3 +1,4 @@
+import { AddProductToCartButton } from "../../../../../../components/AddProductToCartButton/AddProductToCartButton";
 import { Product } from "../../../../../../types";
 
 import s from "./ProductCard.module.css";
@@ -21,6 +22,7 @@ export const ProductCard = ({ productData }: Props) => {
         <h1 className={s.name}>{productData.name}</h1>
         <h1 className={s.price}>{productData.price} ₽</h1>
       </div>
+      <AddProductToCartButton productId={productData.id} />
     </div>
   );
 };

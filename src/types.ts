@@ -4,10 +4,23 @@ export enum UserAuthStatus {
   Authorized = "Authorized",
 }
 
+export interface UserData {
+  cart: string[];
+}
+
 // В таком виде данные юзера будут храниться в сторе.
-export type UserState = {
-  status: UserAuthStatus;
-};
+export type UserState =
+  | {
+      status: UserAuthStatus.Loading;
+    }
+  | {
+      status: UserAuthStatus.Unauthorized;
+    }
+  | {
+      status: UserAuthStatus.Authorized;
+      id: string;
+      userData: UserData;
+    };
 
 export enum RoutePath {
   MainPage = "/",
