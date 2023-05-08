@@ -2,6 +2,8 @@ import { observer } from "mobx-react-lite";
 import { Status, useAddProductToCartButton } from "./useAddProductToCartButton";
 import { store } from "../../store";
 import s from "./AddProductToCartButton.module.css";
+import { Preloader } from "../Preloader/Preloader";
+import { Link } from "react-router-dom";
 
 interface Props {
   productId: string;
@@ -18,10 +20,11 @@ export const AddProductToCartButton: React.FC<Props> = observer(
 
     if (state.status === Status.NeedToSignIn) {
       return (
-        <span>
-          Пожалуйста, авторизауйтесь, чтобы иметь возможность добавлять товары в
-          корзину.
-        </span>
+        <Link to={"/sign-in"}>
+          <button onClick={addProductToCart} className={s.button}>
+            Добавить в корзину
+          </button>
+        </Link>
       );
     }
 
@@ -39,7 +42,7 @@ export const AddProductToCartButton: React.FC<Props> = observer(
           <button onClick={addProductToCart} className={s.button}>
             Добавить в корзину
           </button>
-          <span>
+          <span className={s.message_error}>
             Произошла ошибка при добавлении товара в корзину. Пожалуйста,
             повторите попытку позже.
           </span>
@@ -48,9 +51,12 @@ export const AddProductToCartButton: React.FC<Props> = observer(
     }
 
     if (state.status === Status.Success) {
-      return <span>Товар успешно добавлен в корзину</span>;
+      return (
+        <span className={s.message_success}>
+          Товар успешно добавлен в корзину
+        </span>
+      );
     }
-
-    return <span>Загрузка...</span>;
+    return <Preloader className={s.preloader} />;
   }
 );

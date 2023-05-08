@@ -1,6 +1,5 @@
 .root {
   width: 200px;
-  /* height: 350px; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -36,4 +35,5 @@
 .price {
   font-size: 18px;
   font-weight: 400;
+  margin-bottom: 20px;
 }

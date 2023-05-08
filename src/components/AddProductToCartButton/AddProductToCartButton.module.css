@@ -7,8 +7,25 @@
   color: white;
   font-family: "Proxima Nova";
   cursor: pointer;
-  margin-top: 20px;
 }
 .button:hover {
   background-color: #9c5ff7;
+}
+
+.message_success {
+  width: 180px;
+  color: rgb(26, 213, 35);
+}
+.message_error {
+  composes: message_success;
+  color: rgb(225, 27, 27);
+}
+.message_to_sign_in {
+  composes: message_success;
+  color: #9146ff;
+}
+.preloader {
+  width: 20px;
+  height: 20px;
+  margin: auto;
 }
