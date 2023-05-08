@@ -17,7 +17,12 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { store } from "../store";
-import { ImageInFirebaseStore, Product, UserAuthStatus } from "../types";
+import {
+  ImageInFirebaseStore,
+  Product,
+  UserAuthStatus,
+  UserData,
+} from "../types";
 import { v4 } from "uuid";
 import {
   getStorage,
@@ -71,6 +76,40 @@ class FirebaseApi {
   }
 
   /**
+   * Добавляет товар в корзину юзеру.
+   *
+   * @param userId айдишник юзера.
+   * @param productId айдишник товара.
+   */
+  public async addProductToCart(
+    userId: string,
+    productId: string
+  ): Promise<void> {
+    const userData = await this.fetchUserData(userId);
+    const database = getDatabase();
+    userData.cart.push(productId);
+    await set(databaseRef(database, `usersData/${userId}`), userData);
+    store.addProductToCart(productId);
+  }
+
+  /**
+   * Скачивает данные юзера.
+   *
+   * @param userId айдишник юзера.
+   */
+  public async fetchUserData(userId: string): Promise<UserData> {
+    const dbRef = databaseRef(getDatabase());
+    const snapshot = await get(child(dbRef, `usersData/${userId}`));
+    if (!snapshot.exists()) {
+      return {
+        cart: [],
+      };
+    }
+    const userData = snapshot.val() as UserData;
+    return userData;
+  }
+
+  /**
    * Данный метод является обработчиком события, когда меняется авторизационный статус юзера, а, точнее, когда:
    * 1. Юзер нажал кнопку разлогина
    * 2. Юзер ввёл свои данные на странице "sign-in" и отправил
@@ -79,12 +118,25 @@ class FirebaseApi {
    * 5. Юзер открыл приложение в новой вкладке
    * @param user - обновлённые данные пользователя.
    */
-  private handleUserAuthStatusChange(user: User | null) {
-    if (user) {
+  private async handleUserAuthStatusChange(user: User | null) {
+    if (!user) {
+      store.setUserState({
+        status: UserAuthStatus.Unauthorized,
+      });
+      return;
+    }
+    store.setUserState({
+      status: UserAuthStatus.Loading,
+    });
+
+    try {
+      const userData = await this.fetchUserData(user.uid);
       store.setUserState({
         status: UserAuthStatus.Authorized,
+        id: user.uid,
+        userData,
       });
-    } else {
+    } catch (error) {
       store.setUserState({
         status: UserAuthStatus.Unauthorized,
       });

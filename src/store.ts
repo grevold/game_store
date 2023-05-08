@@ -25,6 +25,11 @@ class Store {
   public setUserState(newUserState: UserState) {
     this.userState = newUserState;
   }
+
+  public addProductToCart(productId: string) {
+    if (this.userState.status !== UserAuthStatus.Authorized) return;
+    this.userState.userData.cart = [...this.userState.userData.cart, productId];
+  }
 }
 
 export const store = new Store();
