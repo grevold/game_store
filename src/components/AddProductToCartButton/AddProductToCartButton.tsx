@@ -1,6 +1,7 @@
 import { observer } from "mobx-react-lite";
 import { Status, useAddProductToCartButton } from "./useAddProductToCartButton";
 import { store } from "../../store";
+import s from "./AddProductToCartButton.module.css";
 
 interface Props {
   productId: string;
@@ -25,13 +26,19 @@ export const AddProductToCartButton: React.FC<Props> = observer(
     }
 
     if (state.status === Status.Init) {
-      return <button onClick={addProductToCart}>Добавить в корзину</button>;
+      return (
+        <button onClick={addProductToCart} className={s.button}>
+          Добавить в корзину
+        </button>
+      );
     }
 
     if (state.status === Status.Error) {
       return (
         <>
-          <button onClick={addProductToCart}>Добавить в корзину</button>
+          <button onClick={addProductToCart} className={s.button}>
+            Добавить в корзину
+          </button>
           <span>
             Произошла ошибка при добавлении товара в корзину. Пожалуйста,
             повторите попытку позже.
