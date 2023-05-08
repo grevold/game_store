@@ -1,26 +1,35 @@
 .swiper {
   width: 100%;
-}
-.swiper:hover {
   cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: end;
+}
+
+.swiper-wrapper {
+  height: auto;
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  border: 0;
-
-  /* Center slide text vertically */
-  display: flex !important;
+  display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-@media (max-width: 400px) {
-  .swiper {
-    width: 100%;
-  }
-  .swiper-slide {
-    display: flex;
-  }
+.swiper-button-prev,
+.swiper-button-next {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  margin-right: 25px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-prev {
+}
+
+.swiper-button-next {
 }
