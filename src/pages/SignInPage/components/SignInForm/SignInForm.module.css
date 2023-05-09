@@ -62,6 +62,15 @@
   margin-left: 120px;
   margin-bottom: 20px;
 }
+.link_to_sign_up {
+  margin-top: 20px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+.link_to_sign_up:hover {
+  color: rgb(159, 159, 159);
+}
 
 @media (max-width: 470px) {
   .root {
