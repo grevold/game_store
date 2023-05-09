@@ -1,4 +1,3 @@
-import { Preloader } from "../../components/Preloader/Preloader";
 import { ProductsList } from "./components/ProductsList/ProductsList";
 
 import s from "./MainPage.module.css";

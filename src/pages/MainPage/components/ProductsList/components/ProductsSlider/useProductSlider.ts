@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Arrow } from "../../../../../../icons/Arrow";
 
 export function useProductSlider() {
   useEffect(() => {
