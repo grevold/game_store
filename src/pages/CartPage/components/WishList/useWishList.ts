@@ -18,12 +18,12 @@ type State =
       products: Product[];
     };
 
-export function useWishList() {
+export function useWishList(productsIds: string[]) {
   const [state, setState] = useState<State>({
     status: Status.Loading,
   });
   useEffect(() => {
-    firebaseApi.fetchAllProducts().then(
+    firebaseApi.fetchProductsByIds(productsIds).then(
       (products) => setState({ status: Status.Success, products }),
       () => setState({ status: Status.Error })
     );
