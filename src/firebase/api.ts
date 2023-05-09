@@ -225,6 +225,14 @@ class FirebaseApi {
       productsIds.includes(id)
     );
   }
+
+  public async removeFromCart(userId: string, productId: string) {
+    const userData = await this.fetchUserData(userId);
+    const database = getDatabase();
+    userData.cart = userData.cart.filter((id) => id !== productId);
+    await set(databaseRef(database, `usersData/${userId}`), userData);
+    store.removeProductFromCart(productId);
+  }
 }
 
 export const firebaseApi = new FirebaseApi();

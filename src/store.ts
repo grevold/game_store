@@ -30,6 +30,13 @@ class Store {
     if (this.userState.status !== UserAuthStatus.Authorized) return;
     this.userState.userData.cart = [...this.userState.userData.cart, productId];
   }
+
+  public removeProductFromCart(productId: string) {
+    if (this.userState.status !== UserAuthStatus.Authorized) return;
+    this.userState.userData.cart = this.userState.userData.cart.filter(
+      (id) => id !== productId
+    );
+  }
 }
 
 export const store = new Store();
