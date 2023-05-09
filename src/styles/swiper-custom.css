@@ -20,7 +20,7 @@
 .swiper-button-next {
   width: 50px;
   height: 50px;
-  background-color: red;
+  border-radius: 50%;
   margin-right: 25px;
   margin-bottom: 30px;
   display: flex;
@@ -28,8 +28,24 @@
   justify-content: center;
 }
 
-.swiper-button-prev {
+.swiper-button-prev:hover {
+  background: #363636;
 }
 
-.swiper-button-next {
+.swiper-button-next:hover {
+  background: #363636;
+}
+
+@media (max-width: 800px) {
+  .swiper {
+    justify-content: center;
+  }
+}
+@media (max-width: 700px) {
+  .swiper-button-prev {
+    display: none;
+  }
+  .swiper-button-next {
+    display: none;
+  }
 }
