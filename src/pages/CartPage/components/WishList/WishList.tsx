@@ -4,9 +4,12 @@ import { useWishList } from "./useWishList";
 import { Status } from "./useWishList";
 
 import s from "./WishList.module.css";
+interface Props {
+  productsIds: string[];
+}
 
-export const WishList = () => {
-  const { state } = useWishList();
+export const WishList: React.FC<Props> = ({ productsIds }) => {
+  const { state } = useWishList(productsIds);
 
   if (state.status === Status.Success) {
     return (

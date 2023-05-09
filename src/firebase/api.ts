@@ -219,6 +219,12 @@ class FirebaseApi {
   //     images,
   //   };
   // }
+
+  public async fetchProductsByIds(productsIds: string[]) {
+    return (await this.fetchAllProducts()).filter(({ id }) =>
+      productsIds.includes(id)
+    );
+  }
 }
 
 export const firebaseApi = new FirebaseApi();
