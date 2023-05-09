@@ -10,9 +10,17 @@ interface Props {
 
 const swiperConfig: SwiperProps = {
   breakpoints: {
-    400: {
+    500: {
       slidesPerView: 1,
-      spaceBetween: 50,
+      spaceBetween: 10,
+    },
+    700: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    800: {
+      slidesPerView: 3,
+      spaceBetween: 30,
     },
     999: {
       slidesPerView: 4,
