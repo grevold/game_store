@@ -1,11 +1,13 @@
 import s from "./CartProduct.module.css";
 import { Product } from "../../../../../../types";
+import { RemoveProductFromCartButton } from "../../../../../../components/RemoveProductFromCartButton/RemoveProductFromCartButton";
 
 interface Props {
   product: Product;
+  userId: string;
 }
 
-export const CartProduct: React.FC<Props> = ({ product }) => {
+export const CartProduct: React.FC<Props> = ({ product, userId }) => {
   return (
     <div className={s.root}>
       <div
@@ -26,7 +28,7 @@ export const CartProduct: React.FC<Props> = ({ product }) => {
         </div>
         <div className={s.game_info}>
           <span className={s.refund}>Самовозврат</span>
-          <button className={s.button_delete}>Удалить</button>
+          <RemoveProductFromCartButton productId={product.id} userId={userId} />
         </div>
       </div>
     </div>

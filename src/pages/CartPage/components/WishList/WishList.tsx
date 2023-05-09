@@ -4,11 +4,13 @@ import { useWishList } from "./useWishList";
 import { Status } from "./useWishList";
 
 import s from "./WishList.module.css";
+
 interface Props {
   productsIds: string[];
+  userId: string;
 }
 
-export const WishList: React.FC<Props> = ({ productsIds }) => {
+export const WishList: React.FC<Props> = ({ productsIds, userId }) => {
   const { state } = useWishList(productsIds);
 
   if (state.status === Status.Success) {
@@ -16,7 +18,7 @@ export const WishList: React.FC<Props> = ({ productsIds }) => {
       <ul className={s.root}>
         {state.products.map((product) => (
           <li>
-            <CartProduct product={product} key={product.id} />
+            <CartProduct product={product} userId={userId} key={product.id} />
           </li>
         ))}
       </ul>
