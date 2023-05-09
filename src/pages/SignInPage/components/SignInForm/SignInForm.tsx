@@ -1,7 +1,9 @@
 import { useSignInForm } from "./useSignInForm";
 import s from "./SignInForm.module.css";
+import { Link } from "react-router-dom";
 
 import { Logo } from "../../../../icons/Logo";
+import { RoutePath } from "../../../../types";
 
 interface Props {
   onSubmit: (email: string, password: string) => void;
@@ -40,6 +42,9 @@ export const SignInForm: React.FC<Props> = ({ onSubmit, onClick }) => {
       >
         Войти
       </button>
+      <Link to={RoutePath.SignUpPage} className={s.link_to_sign_up}>
+        <span>У вас нет аккаунта?</span>
+      </Link>
     </form>
   );
 };
