@@ -45,20 +45,3 @@
 .refund {
   font-size: 18px;
 }
-.button_delete {
-  background: none;
-  border: none;
-  font-size: 18px;
-  color: #aaaaaa;
-  cursor: pointer;
-}
-.button_delete:hover {
-  text-decoration: underline;
-  color: #ffffff;
-}
-.button_delete {
-  background: none;
-  color: rgb(184, 184, 184);
-  font-size: 18px;
-  font-family: "Proxima Nova";
-}
