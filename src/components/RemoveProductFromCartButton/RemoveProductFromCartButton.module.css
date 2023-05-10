@@ -1,0 +1,12 @@
+.buttonClassName {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #aaaaaa;
+  cursor: pointer;
+  font-family: "Proxima Nova";
+}
+.button_delete:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
