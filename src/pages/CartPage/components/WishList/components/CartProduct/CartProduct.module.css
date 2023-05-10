@@ -56,3 +56,9 @@
   text-decoration: underline;
   color: #ffffff;
 }
+.button_delete {
+  background: none;
+  color: rgb(184, 184, 184);
+  font-size: 18px;
+  font-family: "Proxima Nova";
+}

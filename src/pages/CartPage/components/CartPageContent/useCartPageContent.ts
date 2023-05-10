@@ -18,7 +18,7 @@ type State =
       products: Product[];
     };
 
-export function useWishList(productsIds: string[]) {
+export function useCartPageContent(productsIds: string[]) {
   const [state, setState] = useState<State>({
     status: Status.Loading,
   });

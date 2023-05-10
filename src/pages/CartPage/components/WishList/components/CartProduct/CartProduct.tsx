@@ -27,8 +27,12 @@ export const CartProduct: React.FC<Props> = ({ product, userId }) => {
           </div>
         </div>
         <div className={s.game_info}>
-          <span className={s.refund}>Самовозврат</span>
-          <RemoveProductFromCartButton productId={product.id} userId={userId} />
+          <span className={s.refund}>Подробнее</span>
+          <RemoveProductFromCartButton
+            productId={product.id}
+            userId={userId}
+            className={s.button_delete}
+          />
         </div>
       </div>
     </div>
