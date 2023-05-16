@@ -1,0 +1,12 @@
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #181818;
+  padding-top: 50px;
+  color: white;
+}
+.container {
+  display: flex;
+}

@@ -1,9 +1,9 @@
 import { store } from "../../store";
 import { Navigate } from "react-router-dom";
 import { RoutePath, UserAuthStatus } from "../../types";
-import { Preloader } from "../../components/Preloader/Preloader";
 import { observer } from "mobx-react-lite";
 import { CartPageContent } from "./components/CartPageContent/CartPageContent";
+import { PreloaderScreen } from "../../components/PreloaderScreen/PreloaderScreen";
 
 export const CartPage = observer(() => {
   const userState = store.getUserState();
@@ -21,5 +21,5 @@ export const CartPage = observer(() => {
     );
   }
 
-  return <Preloader />;
+  return <PreloaderScreen />;
 });
