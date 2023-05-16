@@ -4,6 +4,7 @@ import {
   useRemoveProductFromCartButton,
 } from "./useRemoveProductFromCartButton";
 import cn from "classnames";
+import { TrashDeleteIcon } from "../../icons/TrashDeleteIcon";
 
 import s from "./RemoveProductFromCartButton.module.css";
 
@@ -26,17 +27,13 @@ export const RemoveProductFromCartButton: React.FC<Props> = ({
 
   if (state.status === Status.Init) {
     return (
-      <button className={buttonClassName} onClick={handleClick}>
-        Удалить
-      </button>
+      <TrashDeleteIcon className={buttonClassName} onClick={handleClick} />
     );
   }
   if (state.status === Status.Error) {
     return (
       <>
-        <button className={buttonClassName} onClick={handleClick}>
-          Удалить
-        </button>
+        <TrashDeleteIcon className={buttonClassName} onClick={handleClick} />
         <span>Не удалось удалить товар</span>
       </>
     );

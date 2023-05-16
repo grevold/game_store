@@ -29,6 +29,7 @@ export enum RoutePath {
   SignUpPage = "/sign-up",
   SignInPage = "/sign-in",
   CartPage = "/cart",
+  ProductPage = "/product-page",
   AddProductPage = "/add-product",
 }
 

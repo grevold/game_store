@@ -14,7 +14,6 @@ export const OrderBlock: React.FC<Props> = ({ products }) => {
 
   return (
     <div className={s.root}>
-      <h1 className={s.header}>Все игры и приложения</h1>
       <div className={s.cost}>
         <span className={s.cost_title}>Цена</span>
         <span className={s.cost_title}>{sum} ₽</span>

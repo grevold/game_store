@@ -8,6 +8,7 @@ import { CatalogPage } from "./pages/CatalogPage/CatalogPage";
 import { NewsPage } from "./pages/NewsPage/NewsPage";
 import { Nav } from "./components/Nav/Nav";
 import { AddProductPage } from "./pages/AddProductPage/AddProductPage";
+import { ProductPage } from "./pages/ProductPage/ProductPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route element={<CatalogPage />} path={RoutePath.CatalogPage} />
         <Route element={<NewsPage />} path={RoutePath.NewsPage} />
         <Route element={<AddProductPage />} path={RoutePath.AddProductPage} />
+        <Route element={<ProductPage />} path={RoutePath.ProductPage} />
         <Route element={<MainPage />} path="*" />
       </Routes>
     </HashRouter>

@@ -22,17 +22,17 @@ export const CartProduct: React.FC<Props> = ({ product, userId }) => {
             <h1 className={s.name}>{product.name}</h1>
             <span className={s.genre}>{product.genre}</span>
           </div>
-          <div className={s.price_block}>
-            <h1 className={s.price}>{product.price} ₽</h1>
-          </div>
+          <button className={s.remove_product_button}>
+            <RemoveProductFromCartButton
+              productId={product.id}
+              userId={userId}
+              className={s.button_delete}
+            />
+          </button>
         </div>
         <div className={s.game_info}>
           <span className={s.refund}>Подробнее</span>
-          <RemoveProductFromCartButton
-            productId={product.id}
-            userId={userId}
-            className={s.button_delete}
-          />
+          <h1 className={s.price}>{product.price} ₽</h1>
         </div>
       </div>
     </div>
