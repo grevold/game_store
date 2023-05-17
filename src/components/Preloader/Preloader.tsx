@@ -1,13 +1,11 @@
 interface Props {
-  width: number;
-  height: number;
+  className?: string;
 }
 
-export const Preloader: React.FC<Props> = ({ width, height }) => {
+export const Preloader: React.FC<Props> = ({ className }) => {
   return (
     <svg
-      width={width}
-      height={height}
+      className={className}
       viewBox="0 0 58 58"
       xmlns="http://www.w3.org/2000/svg"
     >

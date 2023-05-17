@@ -1,9 +1,10 @@
 import { SignUpPageContent } from "./components/SignUpPageContent/SignUpPageContent";
-import { Preloader } from "../../components/Preloader/Preloader";
 import { store } from "../../store";
 import { RoutePath, UserAuthStatus } from "../../types";
 import { Navigate } from "react-router-dom";
 import { observer } from "mobx-react-lite";
+import s from "./SignUpPage.module.css";
+import { PreloaderScreen } from "../../components/PreloaderScreen/PreloaderScreen";
 
 export const SignUpPage = observer(() => {
   const userState = store.getUserState();
@@ -16,5 +17,5 @@ export const SignUpPage = observer(() => {
   if (userState.status === UserAuthStatus.Unauthorized) {
     return <SignUpPageContent />;
   }
-  return <Preloader width={30} height={30} />;
+  return <PreloaderScreen />;
 });

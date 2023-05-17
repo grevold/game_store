@@ -7,3 +7,7 @@
   align-items: center;
   background: #181818;
 }
+.preloader {
+  width: 100px;
+  height: 100px;
+}

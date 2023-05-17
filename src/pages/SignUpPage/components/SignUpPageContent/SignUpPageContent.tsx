@@ -11,7 +11,7 @@ export const SignUpPageContent = () => {
   const firebaseErrors: any = texts.Errors.SignUp.firebaseErrors;
 
   if (state.status === Status.Loading) {
-    return <Preloader width={30} height={30} />;
+    return <Preloader className={s.preloader} />;
   }
 
   return (
