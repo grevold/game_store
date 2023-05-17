@@ -10,7 +10,7 @@ export const SignInPageContent = () => {
   const firebaseErrors: any = texts.Errors.SignIn.firebaseErrors;
 
   if (state.status === Status.Loading) {
-    return <Preloader />;
+    return <Preloader className={s.preloader} />;
   }
 
   return (

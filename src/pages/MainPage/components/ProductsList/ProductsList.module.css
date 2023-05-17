@@ -27,6 +27,11 @@
   display: flex;
   flex-direction: column;
 }
+.preloader {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
 
 @media (max-width: 800px) {
   .container {

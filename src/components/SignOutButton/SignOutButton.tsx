@@ -13,7 +13,7 @@ export const SignOutButton: React.FC<Props> = ({ className }) => {
       onClick={() => firebaseApi.signOut()}
       className={cn(s.root, className)}
     >
-      Sing Out
+      Выйти
     </button>
   );
 };
