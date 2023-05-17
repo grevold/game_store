@@ -20,5 +20,5 @@ export const AddProductPage = observer(() => {
       </div>
     );
   }
-  return <Preloader />;
+  return <Preloader width={30} height={30} />;
 });

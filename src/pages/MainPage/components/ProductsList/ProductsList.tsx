@@ -24,5 +24,5 @@ export const ProductsList = () => {
     );
   }
 
-  return <Preloader />;
+  return <Preloader width={100} height={100} />;
 };

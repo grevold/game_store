@@ -56,6 +56,6 @@ export const AddProductToCartButton: React.FC<Props> = observer(
         </span>
       );
     }
-    return <Preloader className={s.preloader} />;
+    return <Preloader width={30} height={30} />;
   }
 );

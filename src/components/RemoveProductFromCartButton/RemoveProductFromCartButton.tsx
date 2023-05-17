@@ -38,5 +38,5 @@ export const RemoveProductFromCartButton: React.FC<Props> = ({
       </>
     );
   }
-  return <Preloader />;
+  return <Preloader width={30} height={30} />;
 };

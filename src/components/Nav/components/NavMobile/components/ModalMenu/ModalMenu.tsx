@@ -34,8 +34,8 @@ export const ModalMenu: React.FC<Props> = observer(({ className, onClose }) => {
             </li>
           ))}
           {userState.status === UserAuthStatus.Authorized && (
-            <li>
-              <SignOutButton />
+            <li className={cn(s.sign_out_button, className)}>
+              <SignOutButton className={s.sign_out_button} />
             </li>
           )}
         </ul>
