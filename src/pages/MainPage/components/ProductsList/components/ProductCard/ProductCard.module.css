@@ -1,19 +1,22 @@
 .root {
-  width: 200px;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   font-family: "Proxima Nova";
   color: white;
   cursor: pointer;
+  text-decoration: none;
+  position: relative;
 }
 .image {
-  width: 200px;
-  height: 250px;
+  width: 250px;
+  height: 370px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   border: none;
+  border-radius: 5px;
 }
 .image:hover {
   filter: brightness(120%);
@@ -36,4 +39,14 @@
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 20px;
+}
+.button_add_to_cart {
+  width: 150px;
+  height: 40px;
+  background-color: #9146ff;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-family: "Proxima Nova";
+  cursor: pointer;
 }

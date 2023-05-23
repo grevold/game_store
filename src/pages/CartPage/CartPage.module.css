@@ -3,13 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #181818;
-  padding-top: 50px;
-  color: white;
-}
-.container {
-  display: flex;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  background: #181818;
 }

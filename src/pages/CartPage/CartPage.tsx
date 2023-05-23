@@ -5,6 +5,8 @@ import { observer } from "mobx-react-lite";
 import { CartPageContent } from "./components/CartPageContent/CartPageContent";
 import { PreloaderScreen } from "../../components/PreloaderScreen/PreloaderScreen";
 
+import s from "./CartPage.module.css";
+
 export const CartPage = observer(() => {
   const userState = store.getUserState();
 
@@ -14,10 +16,12 @@ export const CartPage = observer(() => {
 
   if (userState.status === UserAuthStatus.Authorized) {
     return (
-      <CartPageContent
-        productsIds={userState.userData.cart}
-        userId={userState.id}
-      />
+      <div className={s.root}>
+        <CartPageContent
+          productsIds={userState.userData.cart}
+          userId={userState.id}
+        />
+      </div>
     );
   }
 

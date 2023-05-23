@@ -1,0 +1,13 @@
+.root {
+  position: relative;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  top: -4px;
+  left: 20px;
+  text-align: center;
+}
