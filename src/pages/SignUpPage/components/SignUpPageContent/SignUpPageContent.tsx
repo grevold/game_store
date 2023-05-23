@@ -5,13 +5,14 @@ import { texts } from "../../../../texts";
 import { Preloader } from "../../../../components/Preloader/Preloader";
 
 import s from "./SignUpPageContent.module.css";
+import { PreloaderScreen } from "../../../../components/PreloaderScreen/PreloaderScreen";
 
 export const SignUpPageContent = () => {
   const { handleFormClick, handleSubmit, state } = useSignUpPageContent();
   const firebaseErrors: any = texts.Errors.SignUp.firebaseErrors;
 
   if (state.status === Status.Loading) {
-    return <Preloader className={s.preloader} />;
+    return <PreloaderScreen />;
   }
 
   return (

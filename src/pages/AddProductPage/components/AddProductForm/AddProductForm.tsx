@@ -46,6 +46,21 @@ export const AddProductForm: React.FC<Props> = ({ onSubmit, onClick }) => {
             <h2>Цена, ₽</h2>
             <input {...register("price")} className={s.input}></input>
           </div>
+          <div>
+            <h2>Рейтинг</h2>
+            <select {...register("rate")} className={s.rate}>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
         </div>
         <Controller
           name="images"
