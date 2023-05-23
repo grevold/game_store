@@ -23,14 +23,14 @@ export const AddProductToCartButton: React.FC<Props> = observer(
     if (state.status === Status.NeedToSignIn) {
       return (
         <Link to={RoutePath.SignInPage}>
-          <button className={s.button}>{text}</button>
+          <button className={className}>{text}</button>
         </Link>
       );
     }
 
     if (state.status === Status.Init) {
       return (
-        <button onClick={addProductToCart} className={s.button}>
+        <button onClick={addProductToCart} className={className}>
           {text}
         </button>
       );
@@ -39,7 +39,7 @@ export const AddProductToCartButton: React.FC<Props> = observer(
     if (state.status === Status.Error) {
       return (
         <>
-          <button onClick={addProductToCart} className={s.button}>
+          <button onClick={addProductToCart} className={className}>
             {text}
           </button>
           <span className={s.message_error}>
@@ -52,9 +52,11 @@ export const AddProductToCartButton: React.FC<Props> = observer(
 
     if (state.status === Status.Success) {
       return (
-        <span className={s.message_success}>
-          Товар успешно добавлен в корзину
-        </span>
+        <Link to={RoutePath.CartPage}>
+          <button onClick={addProductToCart} className={s.button_to_cart}>
+            Перейти в корзину
+          </button>
+        </Link>
       );
     }
     return <Preloader className={s.preloader} />;

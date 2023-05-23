@@ -1,4 +1,4 @@
-export function CartIcon() {
+export function CartIconSvg() {
   return (
     <svg
       height="30"

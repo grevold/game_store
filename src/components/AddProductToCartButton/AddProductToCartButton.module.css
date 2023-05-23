@@ -32,3 +32,11 @@
   height: 30px;
   margin: auto;
 }
+.button_to_cart {
+  composes: button;
+  background: none;
+  border: 2px solid white;
+}
+.button_to_cart:hover {
+  background-color: #3d3d3d;
+}

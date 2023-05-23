@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { UserAuthStatus } from "../../../../types";
 import { SignOutButton } from "../../../SignOutButton/SignOutButton";
-import { CartIcon } from "../../../../icons/CartIcon";
+import { CartIcon } from "../../../CartIcon/CartIcon";
 import { observer } from "mobx-react-lite";
 import { store } from "../../../../store";
-import { mapUserStateToRoutes } from "../../Nav";
+import { texts } from "../../../../texts";
 import cn from "classnames";
 
 import s from "./NavDesktop.module.css";
@@ -15,23 +15,40 @@ interface Props {
 
 export const NavDesktop: React.FC<Props> = observer(({ className }) => {
   const userState = store.getUserState();
-  const routes = mapUserStateToRoutes(userState);
 
+  if (userState.status === UserAuthStatus.Authorized) {
+    const routes = texts.Navigation.authorized;
+    const { cart } = userState.userData;
+
+    return (
+      <header className={cn(s.root, className)}>
+        <ul className={s.navigation}>
+          {routes.map(({ title, path }) => (
+            <li key={title}>
+              <Link className={s.link} to={path}>
+                {title === "Корзина" ? <CartIcon count={cart.length} /> : title}
+              </Link>
+            </li>
+          ))}
+          <li>
+            <SignOutButton />
+          </li>
+        </ul>
+      </header>
+    );
+  }
+
+  const routes = texts.Navigation.unauthorized;
   return (
     <header className={cn(s.root, className)}>
       <ul className={s.navigation}>
         {routes.map(({ title, path }) => (
           <li key={title}>
             <Link className={s.link} to={path}>
-              {title === "Корзина" ? <CartIcon /> : title}
+              {title}
             </Link>
           </li>
         ))}
-        {store.getUserState().status === UserAuthStatus.Authorized && (
-          <li>
-            <SignOutButton />
-          </li>
-        )}
       </ul>
     </header>
   );
