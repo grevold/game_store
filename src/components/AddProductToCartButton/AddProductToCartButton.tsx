@@ -9,10 +9,11 @@ import { RoutePath } from "../../types";
 interface Props {
   productId: string;
   className?: string;
+  text: string;
 }
 
 export const AddProductToCartButton: React.FC<Props> = observer(
-  ({ productId, className }) => {
+  ({ productId, className, text }) => {
     const userState = store.getUserState();
     const { state, addProductToCart } = useAddProductToCartButton(
       userState,
@@ -22,7 +23,7 @@ export const AddProductToCartButton: React.FC<Props> = observer(
     if (state.status === Status.NeedToSignIn) {
       return (
         <Link to={RoutePath.SignInPage}>
-          <button className={s.button}>Добавить в корзину</button>
+          <button className={s.button}>{text}</button>
         </Link>
       );
     }
@@ -30,7 +31,7 @@ export const AddProductToCartButton: React.FC<Props> = observer(
     if (state.status === Status.Init) {
       return (
         <button onClick={addProductToCart} className={s.button}>
-          Добавить в корзину
+          {text}
         </button>
       );
     }
@@ -39,7 +40,7 @@ export const AddProductToCartButton: React.FC<Props> = observer(
       return (
         <>
           <button onClick={addProductToCart} className={s.button}>
-            Добавить в корзину
+            {text}
           </button>
           <span className={s.message_error}>
             Произошла ошибка при добавлении товара в корзину. Пожалуйста,

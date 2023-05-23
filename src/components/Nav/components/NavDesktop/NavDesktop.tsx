@@ -21,8 +21,8 @@ export const NavDesktop: React.FC<Props> = observer(({ className }) => {
     <header className={cn(s.root, className)}>
       <ul className={s.navigation}>
         {routes.map(({ title, path }) => (
-          <li>
-            <Link className={s.link} to={path} key={title}>
+          <li key={title}>
+            <Link className={s.link} to={path}>
               {title === "Корзина" ? <CartIcon /> : title}
             </Link>
           </li>

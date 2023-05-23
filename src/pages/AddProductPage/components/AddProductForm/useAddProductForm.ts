@@ -11,6 +11,7 @@ export interface AddProductFormValues {
   description: string;
   price: number;
   images: File[];
+  rate: number;
 }
 const formSchema = object().shape({
   name: string().required(texts.Errors.AddProductError),

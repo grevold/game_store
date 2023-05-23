@@ -52,4 +52,5 @@ export interface Product {
   price: number;
   genre: string;
   images: ImageInFirebaseStore[];
+  rate: number;
 }

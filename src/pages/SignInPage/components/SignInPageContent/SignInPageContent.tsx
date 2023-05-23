@@ -4,13 +4,14 @@ import { Preloader } from "../../../../components/Preloader/Preloader";
 import { texts } from "../../../../texts";
 
 import s from "./SignInPageContent.module.css";
+import { PreloaderScreen } from "../../../../components/PreloaderScreen/PreloaderScreen";
 
 export const SignInPageContent = () => {
   const { handleFormClick, handleSubmit, state } = useSignInPageContent();
   const firebaseErrors: any = texts.Errors.SignIn.firebaseErrors;
 
   if (state.status === Status.Loading) {
-    return <Preloader className={s.preloader} />;
+    return <PreloaderScreen />;
   }
 
   return (

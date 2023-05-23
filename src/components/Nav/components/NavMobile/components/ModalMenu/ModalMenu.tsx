@@ -27,8 +27,8 @@ export const ModalMenu: React.FC<Props> = observer(({ className, onClose }) => {
         <BurgerIconClose className={s.burgerIconClose} />
         <ul ref={ref} className={s.menu}>
           {routes.map(({ title, path }) => (
-            <li>
-              <Link key={title} className={s.link} to={path} onClick={onClose}>
+            <li key={title}>
+              <Link className={s.link} to={path} onClick={onClose}>
                 {title}
               </Link>
             </li>

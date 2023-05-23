@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import { AddProductToCartButton } from "../../../../../../components/AddProductToCartButton/AddProductToCartButton";
-import { Product } from "../../../../../../types";
+import { Product, RoutePath } from "../../../../../../types";
 
 import s from "./ProductCard.module.css";
 
@@ -10,7 +11,10 @@ interface Props {
 
 export const ProductCard = ({ productData }: Props) => {
   return (
-    <div className={s.root}>
+    <Link
+      to={`${RoutePath.ProductPage}/?productId=${productData.id}`}
+      className={s.root}
+    >
       <div
         className={s.image}
         style={{
@@ -22,7 +26,7 @@ export const ProductCard = ({ productData }: Props) => {
         <h1 className={s.name}>{productData.name}</h1>
         <h1 className={s.price}>{productData.price} ₽</h1>
       </div>
-      <AddProductToCartButton productId={productData.id} />
-    </div>
+      <AddProductToCartButton productId={productData.id} text={"Купить"} />
+    </Link>
   );
 };

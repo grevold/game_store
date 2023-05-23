@@ -9,11 +9,11 @@ export const Preloader: React.FC<Props> = ({ className }) => {
       viewBox="0 0 58 58"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g fill="#9146ff" fill-rule="evenodd">
-        <g transform="translate(2 1)" stroke="#fff" stroke-width="1.5">
-          <circle cx="42.601" cy="11.462" r="5" fill-opacity="1" fill="#9146ff">
+      <g fill="#9146ff" fillRule="evenodd">
+        <g transform="translate(2 1)" stroke="#fff" strokeWidth="1.5">
+          <circle cx="42.601" cy="11.462" r="5" fillOpacity="1" fill="#9146ff">
             <animate
-              attributeName="fill-opacity"
+              attributeName="fillOpacity"
               begin="0s"
               dur="1.3s"
               values="1;0;0;0;0;0;0;0"
@@ -21,9 +21,9 @@ export const Preloader: React.FC<Props> = ({ className }) => {
               repeatCount="indefinite"
             />
           </circle>
-          <circle cx="49.063" cy="27.063" r="5" fill-opacity="0" fill="#9146ff">
+          <circle cx="49.063" cy="27.063" r="5" fillOpacity="0" fill="#9146ff">
             <animate
-              attributeName="fill-opacity"
+              attributeName="fillOpacity"
               begin="0s"
               dur="1.3s"
               values="0;1;0;0;0;0;0;0"
@@ -31,9 +31,9 @@ export const Preloader: React.FC<Props> = ({ className }) => {
               repeatCount="indefinite"
             />
           </circle>
-          <circle cx="42.601" cy="42.663" r="5" fill-opacity="0" fill="#9146ff">
+          <circle cx="42.601" cy="42.663" r="5" fillOpacity="0" fill="#9146ff">
             <animate
-              attributeName="fill-opacity"
+              attributeName="fillOpacity"
               begin="0s"
               dur="1.3s"
               values="0;0;1;0;0;0;0;0"
@@ -41,9 +41,9 @@ export const Preloader: React.FC<Props> = ({ className }) => {
               repeatCount="indefinite"
             />
           </circle>
-          <circle cx="27" cy="49.125" r="5" fill-opacity="0" fill="#9146ff">
+          <circle cx="27" cy="49.125" r="5" fillOpacity="0" fill="#9146ff">
             <animate
-              attributeName="fill-opacity"
+              attributeName="fillOpacity"
               begin="0s"
               dur="1.3s"
               values="0;0;0;1;0;0;0;0"
@@ -51,9 +51,9 @@ export const Preloader: React.FC<Props> = ({ className }) => {
               repeatCount="indefinite"
             />
           </circle>
-          <circle cx="11.399" cy="42.663" r="5" fill-opacity="0" fill="#9146ff">
+          <circle cx="11.399" cy="42.663" r="5" fillOpacity="0" fill="#9146ff">
             <animate
-              attributeName="fill-opacity"
+              attributeName="fillOpacity"
               begin="0s"
               dur="1.3s"
               values="0;0;0;0;1;0;0;0"
@@ -61,9 +61,9 @@ export const Preloader: React.FC<Props> = ({ className }) => {
               repeatCount="indefinite"
             />
           </circle>
-          <circle cx="4.938" cy="27.063" r="5" fill-opacity="0" fill="#9146ff">
+          <circle cx="4.938" cy="27.063" r="5" fillOpacity="0" fill="#9146ff">
             <animate
-              attributeName="fill-opacity"
+              attributeName="fillOpacity"
               begin="0s"
               dur="1.3s"
               values="0;0;0;0;0;1;0;0"
@@ -71,9 +71,9 @@ export const Preloader: React.FC<Props> = ({ className }) => {
               repeatCount="indefinite"
             />
           </circle>
-          <circle cx="11.399" cy="11.462" r="5" fill-opacity="0" fill="#9146ff">
+          <circle cx="11.399" cy="11.462" r="5" fillOpacity="0" fill="#9146ff">
             <animate
-              attributeName="fill-opacity"
+              attributeName="fillOpacity"
               begin="0s"
               dur="1.3s"
               values="0;0;0;0;0;0;1;0"
@@ -81,9 +81,9 @@ export const Preloader: React.FC<Props> = ({ className }) => {
               repeatCount="indefinite"
             />
           </circle>
-          <circle cx="27" cy="5" r="5" fill-opacity="0" fill="#9146ff">
+          <circle cx="27" cy="5" r="5" fillOpacity="0" fill="#9146ff">
             <animate
-              attributeName="fill-opacity"
+              attributeName="fillOpacity"
               begin="0s"
               dur="1.3s"
               values="0;0;0;0;0;0;0;1"

@@ -225,6 +225,9 @@ class FirebaseApi {
       productsIds.includes(id)
     );
   }
+  public async fetchProductById(productId: string) {
+    return (await this.fetchAllProducts()).find(({ id }) => productId === id);
+  }
 
   public async removeFromCart(userId: string, productId: string) {
     const userData = await this.fetchUserData(userId);
