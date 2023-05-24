@@ -54,6 +54,16 @@
   height: 50px;
   background-color: white;
 }
+.button_add_to_cart {
+  width: 150px;
+  height: 40px;
+  background-color: #9146ff;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-family: "Proxima Nova";
+  cursor: pointer;
+}
 
 @media (max-width: 1050px) {
   .container {

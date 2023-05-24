@@ -9,6 +9,7 @@ import { NewsPage } from "./pages/NewsPage/NewsPage";
 import { Nav } from "./components/Nav/Nav";
 import { AddProductPage } from "./pages/AddProductPage/AddProductPage";
 import { ProductPage } from "./pages/ProductPage/ProductPage";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route element={<ProductPage />} path={RoutePath.ProductPage} />
         <Route element={<MainPage />} path="*" />
       </Routes>
+      <Footer />
     </HashRouter>
   );
 }
