@@ -40,31 +40,26 @@ export function Footer() {
           </ul>
           <ul className={s.socials}>
             <li className={s.socials_icon}>
-              {" "}
               <Link to={"https://www.instagram.com/"}>
                 <InstagramIcon />
               </Link>
             </li>
             <li className={s.socials_icon}>
-              {" "}
               <Link to={"https://www.tiktok.com/"}>
                 <TikTokIcon />
               </Link>
             </li>
             <li className={s.socials_icon}>
-              {" "}
               <Link to={"https://www.twitch.tv/"}>
                 <TwitchIcon />
               </Link>
             </li>
             <li className={s.socials_icon}>
-              {" "}
               <Link to={"https://vk.com/"}>
                 <VkIcon />
               </Link>
             </li>
             <li className={s.socials_icon}>
-              {" "}
               <Link to={"https://www.youtube.com/"}>
                 <YouTubeIcon />
               </Link>
