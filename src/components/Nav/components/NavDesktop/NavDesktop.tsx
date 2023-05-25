@@ -8,6 +8,7 @@ import { texts } from "../../../../texts";
 import cn from "classnames";
 
 import s from "./NavDesktop.module.css";
+import { Logo } from "../../../Logo/Logo";
 
 interface Props {
   className?: string;
@@ -23,6 +24,9 @@ export const NavDesktop: React.FC<Props> = observer(({ className }) => {
     return (
       <header className={cn(s.root, className)}>
         <ul className={s.navigation}>
+          <Link to={"/"}>
+            <Logo className={s.logo} />
+          </Link>
           {routes.map(({ title, path }) => (
             <li key={title}>
               <Link className={s.link} to={path}>
@@ -31,7 +35,7 @@ export const NavDesktop: React.FC<Props> = observer(({ className }) => {
             </li>
           ))}
           <li>
-            <SignOutButton />
+            <SignOutButton className={s.sign_out_button} />
           </li>
         </ul>
       </header>
@@ -42,6 +46,7 @@ export const NavDesktop: React.FC<Props> = observer(({ className }) => {
   return (
     <header className={cn(s.root, className)}>
       <ul className={s.navigation}>
+        <Logo className={s.logo} />
         {routes.map(({ title, path }) => (
           <li key={title}>
             <Link className={s.link} to={path}>

@@ -1,16 +1,23 @@
 .root {
-  height: 50px;
+  display: flex;
+  height: 80px;
   background-color: #9146ff;
+  justify-content: center;
+  align-items: center;
 }
 
 .navigation {
   height: 100%;
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-family: "Proxima Nova";
-  gap: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
 }
 
 .link {
@@ -20,4 +27,12 @@
 
 .link:hover {
   text-decoration: underline;
+}
+.logo {
+  width: 100px;
+}
+.sign_out_button {
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  font-size: 20px;
 }

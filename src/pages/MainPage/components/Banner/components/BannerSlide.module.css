@@ -1,0 +1,144 @@
+.simple_linear {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9));
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.bg_image {
+  width: 100%;
+  background: #d32424;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+.preloader {
+  width: 100px;
+  height: 500px;
+  margin: auto;
+}
+.game_info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-top: 70px;
+}
+.container {
+  width: 100%;
+  max-width: 1110px;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: "Proxima Nova";
+  justify-content: space-around;
+  z-index: 2;
+}
+.title {
+  font-size: 62px;
+  margin-bottom: 50px;
+}
+.description {
+  font-size: 18px;
+  width: 600px;
+  max-height: 200px;
+  margin-bottom: 30px;
+}
+.price {
+  display: flex;
+  font-size: 24px;
+  font-weight: 600;
+  width: 340px;
+  justify-content: space-between;
+  align-items: center;
+}
+.button_catalog {
+  width: 200px;
+  height: 50px;
+  background-color: #9146ff;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-family: "Proxima Nova";
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.button_catalog:hover {
+  background-color: #a569ff;
+}
+
+@media (max-width: 850px) {
+  .container {
+    padding-top: 50px;
+  }
+  .title {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+  .description {
+    font-size: 16px;
+    max-width: 500px;
+  }
+  .game_info {
+    margin-top: 30px;
+  }
+  .button_catalog {
+    width: 180px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 680px) {
+  .container {
+    padding-top: 0;
+  }
+  .description {
+    font-size: 12px;
+    max-width: 400px;
+  }
+  .price {
+    width: 250px;
+  }
+  .product_price {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .new {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .description {
+    display: none;
+  }
+  .price {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .button_catalog {
+    width: 110px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .product_price {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
