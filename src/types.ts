@@ -54,3 +54,11 @@ export interface Product {
   images: ImageInFirebaseStore[];
   rate: number;
 }
+
+export interface ProductBanner {
+  title: string;
+  description: string;
+  price: number;
+  bg_img: string;
+  id: string;
+}
