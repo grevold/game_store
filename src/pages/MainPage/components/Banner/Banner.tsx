@@ -11,7 +11,7 @@ const swiperConfig: SwiperProps = {
   spaceBetween: 0,
   centeredSlides: true,
   autoplay: {
-    delay: 300000,
+    delay: 5000,
     disableOnInteraction: false,
   },
   pagination: {

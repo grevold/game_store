@@ -24,7 +24,7 @@ export function BannerSlide({ product }: Props) {
       <div className={s.simple_linear}></div>
       <img
         className={s.bg_image}
-        src={`${process.env.PUBLIC_URL}/Banner/${product.bg_img}`}
+        src={`${process.env.PUBLIC_URL}/Banner/${product.bg}`}
       />
     </Link>
   );

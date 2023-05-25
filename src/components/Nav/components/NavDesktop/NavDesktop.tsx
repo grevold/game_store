@@ -8,7 +8,7 @@ import { texts } from "../../../../texts";
 import cn from "classnames";
 
 import s from "./NavDesktop.module.css";
-import { Logo } from "../../../../icons/Logo";
+import { Logo } from "../../../Logo/Logo";
 
 interface Props {
   className?: string;

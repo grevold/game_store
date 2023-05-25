@@ -59,6 +59,6 @@ export interface ProductBanner {
   title: string;
   description: string;
   price: number;
-  bg_img: string;
+  bg: string;
   id: string;
 }

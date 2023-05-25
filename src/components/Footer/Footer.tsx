@@ -5,19 +5,16 @@ import { TwitchIcon } from "../../icons/TwitchIcon";
 import { VkIcon } from "../../icons/VkIcon";
 import { YouTubeIcon } from "../../icons/YouTubeIcon";
 import s from "./Footer.module.css";
-import { Logo } from "../../icons/Logo";
+
 import { texts } from "../../texts";
+import { Logo } from "../Logo/Logo";
 
 export function Footer() {
   return (
     <div className={s.root}>
       <div className={s.container}>
         <div className={s.footer_content}>
-          <div className={s.logo}>
-            <Link to={"/"}>
-              <Logo />
-            </Link>
-          </div>
+          <Logo className={s.logo} />
           <ul className={s.nav}>
             <Link to={"/catalog"} className={s.link}>
               <li>Каталог</li>
