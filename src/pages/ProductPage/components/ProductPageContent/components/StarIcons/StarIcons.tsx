@@ -1,5 +1,5 @@
-import { StarIcon } from "../../../../../icons/StarIcon";
-import { StarIconDefault } from "../../../../../icons/StarIconDefault";
+import { StarIcon } from "../../../../../../icons/StarIcon";
+import { StarIconDefault } from "../../../../../../icons/StarIconDefault";
 
 interface Props {
   rate: number;
@@ -11,10 +11,10 @@ export function StarIcons({ rate }: Props) {
 
   return (
     <div>
-      {rateStars.map((start) => (
+      {rateStars.map((star) => (
         <StarIcon />
       ))}
-      {defaultStarts.map((start) => (
+      {defaultStarts.map((star) => (
         <StarIconDefault />
       ))}
     </div>

@@ -20,6 +20,7 @@ export const NavDesktop: React.FC<Props> = observer(({ className }) => {
   if (userState.status === UserAuthStatus.Authorized) {
     const routes = texts.Navigation.authorized;
     const { cart } = userState.userData;
+    console.log(cart);
 
     return (
       <header className={cn(s.root, className)}>

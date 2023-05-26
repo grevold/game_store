@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 1110px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   font-family: "Proxima Nova";
@@ -13,6 +13,11 @@
 }
 .container {
   display: flex;
+  flex-direction: column;
+}
+.main {
+  display: flex;
+  margin: 0 auto;
 }
 .image {
   width: 350px;
@@ -47,7 +52,7 @@
 }
 .price {
   font-size: 30px;
-  font-family: "Proxima Nova";
+  font-family: "Verdana Regular";
 }
 .add_to_cart {
   width: 200px;
@@ -55,8 +60,10 @@
   background-color: white;
 }
 .button_add_to_cart {
-  width: 150px;
-  height: 40px;
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+  font-weight: 600;
   background-color: #9146ff;
   border: 0;
   border-radius: 5px;
@@ -64,24 +71,31 @@
   font-family: "Proxima Nova";
   cursor: pointer;
 }
+.button_add_to_cart:hover {
+  background-color: #a569ff;
+}
 
 @media (max-width: 1050px) {
-  .container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   .image {
     margin-bottom: 30px;
   }
   .game_info {
-    margin: 0 auto;
     max-width: 400px;
   }
   .price_block {
     flex-direction: column;
     justify-content: start;
     align-items: start;
+  }
+}
+@media (max-width: 830px) {
+  .main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .game_info {
+    margin: 0 auto;
   }
 }
 
