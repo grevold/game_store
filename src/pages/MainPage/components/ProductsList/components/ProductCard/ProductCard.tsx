@@ -30,7 +30,6 @@ export const ProductCard = ({ productData }: Props) => {
       </Link>
       <AddProductToCartButton
         productId={productData.id}
-        text={"Добавить в корзину"}
         className={s.button_add_to_cart}
       />
     </div>
