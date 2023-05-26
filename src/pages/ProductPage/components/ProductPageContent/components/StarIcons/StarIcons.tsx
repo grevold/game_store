@@ -11,11 +11,11 @@ export function StarIcons({ rate }: Props) {
 
   return (
     <div>
-      {rateStars.map((star) => (
-        <StarIcon />
+      {rateStars.map((star, index) => (
+        <StarIcon key={`${star}_${index}`} />
       ))}
-      {defaultStarts.map((star) => (
-        <StarIconDefault />
+      {defaultStarts.map((star, index) => (
+        <StarIconDefault key={`${star}_${index}`} />
       ))}
     </div>
   );

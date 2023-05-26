@@ -36,7 +36,6 @@ export function ProductPageContent({ productData }: Props) {
             <div className={s.price_block}>
               <AddProductToCartButton
                 productId={productData.id}
-                text={"В корзину"}
                 className={s.button_add_to_cart}
               />
               <h2 className={s.price}>{productData.price} ₽</h2>
