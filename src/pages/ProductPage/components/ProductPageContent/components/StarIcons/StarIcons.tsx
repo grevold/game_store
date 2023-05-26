@@ -1,22 +1,20 @@
 import { StarIcon } from "../../../../../../icons/StarIcon";
 import { StarIconDefault } from "../../../../../../icons/StarIconDefault";
 
+import s from "./StarIcons.module.css";
+
 interface Props {
   rate: number;
 }
 
 export function StarIcons({ rate }: Props) {
-  const rateStars = Array.from({ length: rate });
-  const defaultStarts = Array.from({ length: 10 - rate });
+  const array = Array.from({ length: 10 });
 
   return (
-    <div>
-      {rateStars.map((star, index) => (
-        <StarIcon key={index} />
+    <ul className={s.root}>
+      {array.map((_, index) => (
+        <li key={index}>{index < rate ? <StarIcon /> : <StarIconDefault />}</li>
       ))}
-      {defaultStarts.map((star, index) => (
-        <StarIconDefault key={index} />
-      ))}
-    </div>
+    </ul>
   );
 }
