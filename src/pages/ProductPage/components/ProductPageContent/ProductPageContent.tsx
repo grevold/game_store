@@ -1,5 +1,4 @@
 import { AddProductToCartButton } from "../../../../components/AddProductToCartButton/AddProductToCartButton";
-import { Bullet } from "../../../../icons/Bullet";
 import { Product } from "../../../../types";
 import { Activation } from "./components/Activation/Activation";
 import { StarIcons } from "./components/StarIcons/StarIcons";

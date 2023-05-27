@@ -53,7 +53,7 @@ export interface Product {
   genre: string;
   images: ImageInFirebaseStore[];
   rate: number;
-  systemRequirements: Record<string, string>;
+  SystemReq: Record<string, string>;
 }
 
 export interface ProductBanner {
