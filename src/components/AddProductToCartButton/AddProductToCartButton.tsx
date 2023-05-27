@@ -29,7 +29,7 @@ export const AddProductToCartButton: React.FC<Props> = observer(
 
     if (state.status === Status.Init) {
       return (
-        <button onClick={addProductToCart} className={className}>
+        <button onClick={addProductToCart} className={s.button}>
           В корзину
         </button>
       );
@@ -51,13 +51,17 @@ export const AddProductToCartButton: React.FC<Props> = observer(
 
     if (state.status === Status.Success) {
       return (
-        <Link to={RoutePath.CartPage}>
-          <button onClick={addProductToCart} className={s.button_to_cart}>
-            В корзину
+        <Link to={RoutePath.CartPage} className={s.link}>
+          <button onClick={addProductToCart} className={s.button_go_to_cart}>
+            Перейти в корзину
           </button>
         </Link>
       );
     }
-    return <Preloader className={s.preloader} />;
+    return (
+      <button onClick={addProductToCart} className={s.button_go_to_cart}>
+        <Preloader className={s.preloader} />
+      </button>
+    );
   }
 );

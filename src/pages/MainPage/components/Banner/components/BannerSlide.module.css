@@ -56,6 +56,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.product_price {
+  font-family: "Franklin Gothic Medium", sans-serif;
+}
 .button_catalog {
   width: 200px;
   height: 50px;

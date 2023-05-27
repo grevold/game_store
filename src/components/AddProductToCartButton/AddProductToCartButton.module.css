@@ -6,6 +6,8 @@
   border-radius: 5px;
   color: white;
   font-family: "Proxima Nova";
+  font-size: 18px;
+  font-weight: 500;
   cursor: pointer;
 }
 .button:hover {
@@ -32,11 +34,19 @@
   height: 30px;
   margin: auto;
 }
-.button_to_cart {
+.button_go_to_cart {
   composes: button;
   background: none;
+  width: 200px;
   border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
-.button_to_cart:hover {
+.button_go_to_cart:hover {
   background-color: #3d3d3d;
+}
+.link {
+  text-decoration: none;
 }
