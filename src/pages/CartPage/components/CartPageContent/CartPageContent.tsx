@@ -2,6 +2,7 @@ import { WishList } from "../WishList/WishList";
 import { useCartPageContent } from "./useCartPageContent";
 import { Status } from "./useCartPageContent";
 import { OrderBlock } from "../OrderBlock/OrderBlock";
+import imageNotFound from "./../../../../images/Not_found.png";
 
 import s from "./CartPageContent.module.css";
 import { PreloaderScreen } from "../../../../components/PreloaderScreen/PreloaderScreen";
@@ -27,8 +28,9 @@ export const CartPageContent: React.FC<Props> = ({ productsIds, userId }) => {
 
   if (state.status === Status.Error) {
     return (
-      <div className={s.root}>
-        <span>Не удалось загрузить товары</span>
+      <div className={s.root_null}>
+        <img src={imageNotFound} className={s.not_found_img} />
+        <span className={s.not_found_message}>Товары не найдены</span>
       </div>
     );
   }
