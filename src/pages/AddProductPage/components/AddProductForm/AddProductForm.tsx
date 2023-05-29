@@ -69,6 +69,23 @@ export const AddProductForm: React.FC<Props> = ({ onSubmit, onClick }) => {
             <ImagesUploader onSelect={onChange} className={s.imagesUploader} />
           )}
         />
+        <h1 className={s.title}>Минимальные системные требования</h1>
+        <h2>OC</h2>
+        <input className={s.input} {...register("oc")}></input>
+        <h2>Видеокарта</h2>
+        <input className={s.input} {...register("videoCard")}></input>
+        <h2>Процессор</h2>
+        <input className={s.input} {...register("processor")}></input>
+        <div className={s.systemReqNumbers}>
+          <div>
+            <h2>Место на диске, Гб</h2>
+            <input className={s.input} {...register("diskSpace")}></input>
+          </div>
+          <div>
+            <h2>Оперативная память, Гб</h2>
+            <input className={s.input} {...register("ram")}></input>
+          </div>
+        </div>
         <button className={s.button_add} type="submit">
           Добавить
         </button>

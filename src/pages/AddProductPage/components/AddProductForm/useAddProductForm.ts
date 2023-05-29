@@ -12,7 +12,11 @@ export interface AddProductFormValues {
   price: number;
   images: File[];
   rate: number;
-  SystemReq: Record<string, string>;
+  oc: string;
+  videoCard: string;
+  diskSpace: number;
+  ram: number;
+  processor: string;
 }
 const formSchema = object().shape({
   name: string().required(texts.Errors.AddProductError),
@@ -22,6 +26,11 @@ const formSchema = object().shape({
   description: string().required(texts.Errors.AddProductError),
   price: number().required(texts.Errors.AddProductError),
   images: array(),
+  oc: string(),
+  videoCard: string(),
+  diskSpace: number(),
+  ram: number(),
+  processor: string(),
 });
 
 export const useAddProductForm = (

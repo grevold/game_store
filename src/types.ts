@@ -8,7 +8,7 @@ export interface UserData {
   cart: string[];
 }
 
-// В таком виде данные юзера будут храниться в сторе.
+// В таком виде данные юзера будут храниться в store.
 export type UserState =
   | {
       status: UserAuthStatus.Loading;
@@ -53,7 +53,11 @@ export interface Product {
   genre: string;
   images: ImageInFirebaseStore[];
   rate: number;
-  SystemReq: Record<string, string>;
+  oc: string;
+  videoCard: string;
+  diskSpace: number;
+  ram: number;
+  processor: string;
 }
 
 export interface ProductBanner {
