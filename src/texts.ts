@@ -143,4 +143,11 @@ export const texts = {
     Nordic Games, Paradox, Plug-in-Digital, Take-Two Interactive, Team17,
     Ubisoft, Бука, Новый Диск и другие.`,
   },
+  SystemReq: {
+    oc: "OC",
+    videoCard: "Видеокарта",
+    diskSpace: "Место на диске",
+    ram: "Оперативная память",
+    processor: "Процессор",
+  },
 };

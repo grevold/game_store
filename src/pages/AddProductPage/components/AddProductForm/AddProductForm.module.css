@@ -35,6 +35,7 @@
 }
 .rate {
   composes: input;
+  max-width: 300px;
 }
 .input_discount {
   composes: input;
@@ -49,11 +50,11 @@
 }
 .price {
   display: flex;
-  gap: 50px;
+  gap: 20px;
 }
 .button_add {
   display: block;
-  margin: 30px auto 0;
+  margin: 0 auto;
   width: 200px;
   height: 50px;
   background-color: #9146ff;
@@ -61,15 +62,40 @@
   border: 0;
   color: white;
   font-weight: 600;
+  font-size: 20px;
+  border-radius: 5px;
 }
 .button_add:hover {
   background-color: #522398;
+}
+.title {
+  margin-bottom: 20px;
+}
+.systemReqNumbers {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 850px) {
+  .root {
+    max-width: 700px;
+  }
+}
+@media (max-width: 700px) {
+  .systemReqNumbers {
+    flex-direction: column;
+  }
+  .root {
+    max-width: 500px;
+  }
 }
 
 @media (max-width: 550px) {
   .price {
     flex-direction: column;
     gap: 0;
+  }
+  .button_add {
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 490px) {
