@@ -124,7 +124,7 @@
     font-size: 16px;
   }
   .title {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 20px;
   }
   .description {
@@ -136,12 +136,15 @@
     justify-content: center;
   }
   .button_catalog {
-    width: 110px;
-    height: 30px;
-    font-size: 12px;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
   }
   .product_price {
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 22px;
+  }
+  .bg_image {
+    height: 400px;
   }
 }

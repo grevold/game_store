@@ -7,7 +7,7 @@ export function TrashDeleteIcon({ className, onClick }: Props) {
   return (
     <svg
       onClick={onClick}
-      fill="white"
+      fill="red"
       width="25px"
       height="25px"
       viewBox="0 0 1920 1920"

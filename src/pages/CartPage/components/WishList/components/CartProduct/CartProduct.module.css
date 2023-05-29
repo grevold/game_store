@@ -53,3 +53,45 @@
   border: none;
   height: 40px;
 }
+
+@media (max-width: 1000px) {
+  .root {
+    margin-right: 0;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .root {
+    margin-right: 0;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+  }
+  .description {
+    width: 300px;
+    justify-content: space-between;
+    gap: 0px;
+  }
+  .image {
+    margin: 0;
+  }
+  .remove_product_button {
+    position: absolute;
+    top: 15px;
+    left: 280px;
+  }
+}
+
+@media (max-width: 400px) {
+  .root {
+    max-width: 300px;
+  }
+  .description {
+    padding: 20px 20px 0px 20px;
+  }
+  .remove_product_button {
+    left: 250px;
+  }
+}
