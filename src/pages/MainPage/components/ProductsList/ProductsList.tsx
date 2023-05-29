@@ -18,7 +18,7 @@ export const ProductsList = () => {
 
   if (state.status === Status.Error) {
     return (
-      <div className={s.container}>
+      <div className={s.container_null}>
         <span>Не удалось загрузить товары</span>
       </div>
     );

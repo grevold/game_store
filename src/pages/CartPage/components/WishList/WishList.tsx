@@ -9,6 +9,10 @@ interface Props {
 }
 
 export const WishList: React.FC<Props> = ({ products, userId }) => {
+  console.log(products);
+  if (products.length === 0) {
+    return <div className={s.root_null}>Корзина пуста</div>;
+  }
   return (
     <ul className={s.root}>
       {products.map((product) => (
