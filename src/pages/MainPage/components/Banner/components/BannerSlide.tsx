@@ -16,8 +16,8 @@ export function BannerSlide({ product }: Props) {
           <h1 className={s.title}>{product.title}</h1>
           <div className={s.description}>{product.description}</div>
           <div className={s.price}>
-            <button className={s.button_catalog}>В каталог</button>
             <h2 className={s.product_price}>{product.price} ₽</h2>
+            <button className={s.button_catalog}>В каталог</button>
           </div>
         </div>
       </div>

@@ -27,9 +27,17 @@
   font-family: "Proxima Nova";
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 300px) {
   .container {
     flex-direction: column-reverse;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 900px) {
+  .container {
+    flex-direction: row;
     width: 100%;
     align-items: center;
     justify-content: center;

@@ -1,3 +1,37 @@
+* {
+  text-decoration: none;
+  color: white;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Proxima Nova";
+  color: white;
+  margin-top: 50px;
+  z-index: 2;
+}
+.bg_image {
+  width: 100%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  height: 400px;
+}
+.product_price {
+  font-family: "Franklin Gothic Medium", sans-serif;
+}
 .simple_linear {
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9));
   position: absolute;
@@ -6,58 +40,13 @@
   top: 0;
   bottom: 0;
 }
-
-.bg_image {
-  width: 100%;
-  background: #d32424;
-  background-repeat: no-repeat;
-  object-fit: cover;
-}
 .preloader {
   width: 100px;
   height: 500px;
   margin: auto;
 }
-.game_info {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  margin-top: 70px;
-}
-.container {
-  width: 100%;
-  max-width: 1110px;
-  color: white;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
-  font-family: "Proxima Nova";
-  justify-content: space-around;
-  z-index: 2;
-}
-.title {
-  font-size: 62px;
-  margin-bottom: 50px;
-}
 .description {
-  font-size: 18px;
-  width: 600px;
-  max-height: 200px;
-  margin-bottom: 30px;
-}
-.price {
-  display: flex;
-  font-size: 24px;
-  font-weight: 600;
-  width: 340px;
-  justify-content: space-between;
-  align-items: center;
-}
-.product_price {
-  font-family: "Franklin Gothic Medium", sans-serif;
+  display: none;
 }
 .button_catalog {
   width: 200px;
@@ -70,81 +59,103 @@
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 .button_catalog:hover {
   background-color: #a569ff;
 }
+.game_info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 70px;
+  margin: 0 auto;
+}
+.description {
+  display: none;
+}
 
-@media (max-width: 850px) {
-  .container {
-    padding-top: 50px;
-  }
-  .title {
-    font-size: 42px;
-    margin-bottom: 10px;
-  }
-  .description {
-    font-size: 16px;
-    max-width: 500px;
-  }
+@media (min-width: 700px) {
   .game_info {
-    margin-top: 30px;
+    margin-top: 20px;
   }
-  .button_catalog {
-    width: 180px;
-    height: 40px;
-    font-size: 18px;
-  }
-}
-@media (max-width: 680px) {
   .container {
-    padding-top: 0;
+    max-width: 500px;
+    margin-top: 0;
   }
   .description {
-    font-size: 12px;
-    max-width: 400px;
-  }
-  .price {
-    width: 250px;
-  }
-  .product_price {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 500px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .new {
+    display: block;
     font-size: 16px;
-  }
-  .title {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  .description {
-    display: none;
-  }
-  .price {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .button_catalog {
-    width: 150px;
-    height: 40px;
-    font-size: 18px;
-  }
-  .product_price {
-    margin-top: 10px;
-    font-size: 22px;
+    width: 550px;
+    height: 100px;
+    margin-top: 20px;
   }
   .bg_image {
-    height: 400px;
+    width: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 600px;
+  }
+
+  .button_catalog {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .product_price {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1170px) {
+  .game_info {
+    max-width: 1110px;
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    margin-top: 250px;
+  }
+  .container {
+    margin: 0;
+    justify-content: start;
+    align-items: start;
+  }
+  .description {
+    text-align: start;
+    display: block;
+    font-size: 20px;
+    width: 600px;
+    height: 150px;
+  }
+  .bg_image {
+    width: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 100%;
+  }
+  .title {
+    text-align: start;
+    font-size: 50px;
+    width: 500px;
+  }
+  .button_catalog {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .price {
+    display: flex;
+    max-width: 300px;
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .product_price {
+    font-size: 30px;
+    margin: 0;
   }
 }
