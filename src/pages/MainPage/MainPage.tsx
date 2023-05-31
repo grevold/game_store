@@ -7,7 +7,7 @@ export const MainPage = () => {
   return (
     <div className={s.root}>
       <Banner />
-      {/* <ProductsList />  */}
+      <ProductsList />
     </div>
   );
 };

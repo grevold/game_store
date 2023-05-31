@@ -24,9 +24,3 @@
   font-weight: 600;
   font-family: "Proxima Nova";
 }
-
-@media (max-width: 600px) {
-  .not_found_img {
-    width: 80%;
-  }
-}
