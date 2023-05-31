@@ -4,6 +4,7 @@
   background-color: #9146ff;
   padding-left: 20px;
   padding-right: 20px;
+  height: 100%;
 }
 .container {
   width: 100%;
@@ -18,8 +19,10 @@
 }
 .footer_content {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .socials {
   display: flex;
@@ -28,13 +31,17 @@
 }
 .nav {
   width: 100%;
-  max-width: 400px;
-  height: 150px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   list-style: none;
-  gap: 20px;
+  max-width: 300px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.logo {
+  margin-bottom: 20px;
 }
 .link {
   font-family: "Proxima Nova";
@@ -42,6 +49,7 @@
   font-weight: 600;
   color: white;
   text-decoration: none;
+  margin-bottom: 10px;
 }
 .link:hover {
   text-decoration: underline;
@@ -58,27 +66,17 @@
   cursor: pointer;
 }
 
-@media (max-width: 850px) {
-  .nav {
-    font-size: 16px;
-    gap: 10px;
-    max-width: 200px;
+@media (min-width: 600px) {
+  .footer_content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
   }
 }
-@media (max-width: 700px) {
-  .root {
-    height: 600px;
-  }
-  .footer_content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .logo {
-    margin-bottom: 20px;
-  }
+
+@media (min-width: 800px) {
   .nav {
-    max-width: 200px;
-    margin-bottom: 20px;
+    height: 120px;
+    max-width: 400px;
   }
 }
