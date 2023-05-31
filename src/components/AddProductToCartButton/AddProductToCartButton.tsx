@@ -29,7 +29,7 @@ export const AddProductToCartButton: React.FC<Props> = observer(
 
     if (state.status === Status.Init) {
       return (
-        <button onClick={addProductToCart} className={s.button}>
+        <button onClick={addProductToCart} className={className}>
           В корзину
         </button>
       );

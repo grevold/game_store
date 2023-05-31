@@ -47,9 +47,3 @@
   margin-top: 250px;
   margin-bottom: 250px;
 }
-
-@media (max-width: 800px) {
-  .container {
-    justify-content: center;
-  }
-}
