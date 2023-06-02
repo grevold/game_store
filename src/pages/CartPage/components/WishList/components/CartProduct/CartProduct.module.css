@@ -67,7 +67,7 @@
   top: 15px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 840px) {
   .root {
     max-width: none;
     height: 300px;
