@@ -1,12 +1,14 @@
 .root {
   height: 250px;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   padding: 20px;
   font-family: "Proxima Nova";
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 20px;
+  margin-bottom: 50px;
 }
 .header {
   font-size: 18px;
@@ -34,22 +36,8 @@
   background-color: #9956ff;
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 800px) {
   .root {
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 50px;
-  }
-  .button_buy {
-    width: 250px;
-    height: 50px;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 500px) {
-  .button_buy {
-    width: 100%;
+    max-width: 400px;
   }
 }
