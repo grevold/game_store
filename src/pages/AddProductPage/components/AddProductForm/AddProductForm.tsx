@@ -33,7 +33,9 @@ export const AddProductForm: React.FC<Props> = ({ onSubmit, onClick }) => {
         <h2>Жанр</h2>
         <select className={s.input} {...register("genre")}>
           {genres.map((genre) => (
-            <option>{genre}</option>
+            <option className={s.input_option} key={genre}>
+              {genre}
+            </option>
           ))}
         </select>
         <h2>Описание</h2>
@@ -49,16 +51,16 @@ export const AddProductForm: React.FC<Props> = ({ onSubmit, onClick }) => {
           <div>
             <h2>Рейтинг</h2>
             <select {...register("rate")} className={s.rate}>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
+              <option className={s.rate_option}>1</option>
+              <option className={s.rate_option}>2</option>
+              <option className={s.rate_option}>3</option>
+              <option className={s.rate_option}>4</option>
+              <option className={s.rate_option}>5</option>
+              <option className={s.rate_option}>6</option>
+              <option className={s.rate_option}>7</option>
+              <option className={s.rate_option}>8</option>
+              <option className={s.rate_option}>9</option>
+              <option className={s.rate_option}>10</option>
             </select>
           </div>
         </div>

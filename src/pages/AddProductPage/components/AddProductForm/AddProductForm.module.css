@@ -21,6 +21,7 @@
 }
 .developers {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 30px;
 }
@@ -33,9 +34,15 @@
   padding-left: 10px;
   color: black;
 }
+.input_option {
+  color: black;
+}
 .rate {
   composes: input;
   max-width: 300px;
+}
+.rate_option {
+  color: black;
 }
 .input_discount {
   composes: input;
@@ -74,38 +81,12 @@
 }
 .systemReqNumbers {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
-@media (max-width: 850px) {
-  .root {
-    max-width: 700px;
-  }
-}
-@media (max-width: 700px) {
-  .systemReqNumbers {
-    flex-direction: column;
-  }
-  .root {
-    max-width: 500px;
-  }
-}
 
-@media (max-width: 550px) {
-  .price {
-    flex-direction: column;
-    gap: 0;
-  }
-  .button_add {
-    margin-bottom: 50px;
-  }
-}
-@media (max-width: 490px) {
-  .root {
-    margin: 50px 0 50px 0;
-    padding: 0 30px 0 30px;
-  }
-  .developers {
-    flex-direction: column;
-    gap: 0;
+@media (min-width: 800px) {
+  .systemReqNumbers {
+    flex-direction: row;
   }
 }
