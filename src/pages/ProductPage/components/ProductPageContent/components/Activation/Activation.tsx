@@ -1,5 +1,4 @@
 import { Bullet } from "../../../../../../icons/Bullet";
-import { Product } from "../../../../../../types";
 
 import s from "./Activation.module.css";
 
