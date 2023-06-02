@@ -26,7 +26,7 @@ export const ModalMenu: React.FC<Props> = observer(({ className, onClose }) => {
     return (
       <ScrollLock>
         <div className={cn(s.root, className)}>
-          <BurgerIconClose className={s.burgerIconClose} />
+          <BurgerIconClose className={s.burgerIconClose} onClick={onClose} />
           <ul ref={ref} className={s.menu}>
             {routes.map(({ title, path }) => (
               <li key={title}>
@@ -35,7 +35,7 @@ export const ModalMenu: React.FC<Props> = observer(({ className, onClose }) => {
                 </Link>
               </li>
             ))}
-            <li className={cn(s.sign_out_button, className)}>
+            <li>
               <SignOutButton className={s.sign_out_button} />
             </li>
           </ul>

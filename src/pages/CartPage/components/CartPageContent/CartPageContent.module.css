@@ -3,7 +3,7 @@
   max-width: 1110px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   background: #181818;
   padding-top: 50px;
   color: white;
@@ -39,7 +39,7 @@
   .container {
     flex-direction: row;
     width: 100%;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
   }
 }
