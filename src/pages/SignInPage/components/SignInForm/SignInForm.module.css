@@ -12,9 +12,12 @@
   background: rgba(27, 27, 27, 0.93);
   padding-left: 30px;
   padding-right: 30px;
+  text-align: center;
+  margin: 50px auto;
 }
 .logo {
   margin-bottom: 30px;
+  width: 300px;
 }
 .registration_header {
   margin-bottom: 20px;
@@ -26,14 +29,16 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  flex-direction: column;
 }
 .label {
-  font-size: 18px;
+  font-size: 20px;
   width: 100px;
-  text-align: start;
+  text-align: center;
+  margin-bottom: 10px;
 }
 .input {
-  width: 250px;
+  width: 100%;
   height: 50px;
   border: 1px solid white;
   border-radius: 5px;
@@ -45,15 +50,14 @@
 .button_sign_up {
   width: 100%;
   height: 50px;
-  max-width: 400px;
+  max-width: 280px;
   border-radius: 5px;
   border: 0;
-  background: rgba(0, 94, 255, 0.93);
+  background-color: #9146ff;
   font-size: 20px;
   color: white;
   cursor: pointer;
   margin-top: 30px;
-  /* position: absolute; */
 }
 .error_message {
   color: red;
@@ -70,36 +74,4 @@
 }
 .link_to_sign_up:hover {
   color: rgb(159, 159, 159);
-}
-
-@media (max-width: 470px) {
-  .root {
-    text-align: center;
-  }
-  .error_message {
-    color: red;
-    font-size: 12px;
-    width: 240px;
-    margin-left: 120px;
-    margin-bottom: 10px;
-  }
-  .input {
-    width: 100%;
-    height: 40px;
-  }
-  .label {
-    display: block;
-    font-size: 22px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .button_sign_up {
-    width: 100%;
-  }
-  .data_row {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 }

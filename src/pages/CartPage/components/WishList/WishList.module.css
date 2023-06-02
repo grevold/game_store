@@ -18,7 +18,7 @@
   background: rgba(42, 42, 42, 0.93);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 840px) {
   .root {
     align-items: normal;
   }

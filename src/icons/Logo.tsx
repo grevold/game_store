@@ -1,14 +1,13 @@
 interface Props {
-  className?: string;
+  width?: number;
   onClick?: () => void;
 }
 
-export function Logo({ className, onClick }: Props) {
+export function Logo({ width, onClick }: Props) {
   return (
     <svg
-      className={className}
-      width="122"
-      height="42"
+      width="300"
+      height="82"
       viewBox="0 0 122 42"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
