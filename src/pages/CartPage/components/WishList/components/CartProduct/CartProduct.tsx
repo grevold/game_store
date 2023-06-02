@@ -30,9 +30,9 @@ export const CartProduct: React.FC<Props> = ({ product, userId }) => {
             />
           </button>
         </div>
-        <div className={s.game_info}>
-          <span className={s.refund}>Подробнее</span>
+        <div className={s.price_block}>
           <h1 className={s.price}>{product.price} ₽</h1>
+          <span className={s.refund}>Подробнее</span>
         </div>
       </div>
     </div>
