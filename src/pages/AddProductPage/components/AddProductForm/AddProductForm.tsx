@@ -12,7 +12,7 @@ interface Props {
 
 export const AddProductForm: React.FC<Props> = ({ onSubmit, onClick }) => {
   const { genres } = texts.AddProduct;
-  const { submit, register, formState, control } = useAddProductForm(onSubmit);
+  const { submit, register, control } = useAddProductForm(onSubmit);
 
   return (
     <form className={s.root} onSubmit={submit} onClick={onClick}>
@@ -43,6 +43,8 @@ export const AddProductForm: React.FC<Props> = ({ onSubmit, onClick }) => {
           className={s.description}
           {...register("description")}
         ></textarea>
+        <h2>Ключ</h2>
+        <input className={s.input} {...register("key")}></input>
         <div className={s.price}>
           <div>
             <h2>Цена, ₽</h2>
