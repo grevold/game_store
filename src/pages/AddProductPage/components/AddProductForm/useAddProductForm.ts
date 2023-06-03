@@ -17,6 +17,7 @@ export interface AddProductFormValues {
   diskSpace: number;
   ram: number;
   processor: string;
+  key: string;
 }
 const formSchema = object().shape({
   name: string().required(texts.Errors.AddProductError),
@@ -31,6 +32,7 @@ const formSchema = object().shape({
   diskSpace: number(),
   ram: number(),
   processor: string(),
+  key: string(),
 });
 
 export const useAddProductForm = (

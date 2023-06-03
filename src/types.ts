@@ -58,6 +58,7 @@ export interface Product {
   diskSpace: number;
   ram: number;
   processor: string;
+  key: string;
 }
 
 export interface ProductBanner {
