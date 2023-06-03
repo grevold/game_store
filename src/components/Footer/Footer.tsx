@@ -4,14 +4,19 @@ import { TikTokIcon } from "../../icons/TikTok.Icon";
 import { TwitchIcon } from "../../icons/TwitchIcon";
 import { VkIcon } from "../../icons/VkIcon";
 import { YouTubeIcon } from "../../icons/YouTubeIcon";
+import cn from "classnames";
 import s from "./Footer.module.css";
 
 import { texts } from "../../texts";
 import { Logo } from "../Logo/Logo";
 
-export function Footer() {
+interface Props {
+  className?: string;
+}
+
+export function Footer({ className }: Props) {
   return (
-    <div className={s.root}>
+    <footer className={cn(s.root, className)}>
       <div className={s.container}>
         <div className={s.footer_content}>
           <Logo className={s.logo} />
@@ -68,6 +73,6 @@ export function Footer() {
         </div>
         <div className={s.copyrights}>{texts.Footer.copyrightText}</div>
       </div>
-    </div>
+    </footer>
   );
 }
