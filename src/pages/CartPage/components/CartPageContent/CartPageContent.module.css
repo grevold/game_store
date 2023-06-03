@@ -5,11 +5,13 @@
   align-items: center;
   justify-content: center;
   background: #181818;
-  padding-top: 50px;
   color: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .container {
   display: flex;
+  width: 300px;
 }
 .root_null {
   width: 100%;
