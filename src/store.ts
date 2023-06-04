@@ -1,13 +1,23 @@
-import { UserAuthStatus, UserState } from "./types";
+import {
+  FetchProductsStatus,
+  ProductsState,
+  UserAuthStatus,
+  UserState,
+} from "./types";
 import { makeAutoObservable } from "mobx";
 
 class Store {
   private userState: UserState;
+  private productsState: ProductsState;
 
   constructor() {
     makeAutoObservable(this); // Вот этой строкой мы говорим, что объект (который будет создан при помощи класса Store) будет отслеживаемым (в том смысле, что при малейшем его изменении будут перерендериваться компоненты, подписанные на него).
     this.userState = {
       status: UserAuthStatus.Loading,
+    };
+    this.productsState = {
+      status: FetchProductsStatus.Loading,
+      products: [],
     };
   }
 
@@ -36,6 +46,14 @@ class Store {
     this.userState.userData.cart = this.userState.userData.cart.filter(
       (id) => id !== productId
     );
+  }
+
+  public setProductsState(productsState: ProductsState) {
+    this.productsState = productsState;
+  }
+
+  public getProductsState(): ProductsState {
+    return this.productsState;
   }
 }
 

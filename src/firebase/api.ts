@@ -18,6 +18,7 @@ import {
 } from "firebase/auth";
 import { store } from "../store";
 import {
+  FetchProductsStatus,
   ImageInFirebaseStore,
   Product,
   UserAuthStatus,
@@ -66,13 +67,6 @@ class FirebaseApi {
    */
   public async signOut(): Promise<void> {
     await this.auth.signOut();
-  }
-
-  public async createDocument(id: string) {
-    const database = getDatabase();
-    await set(databaseRef(database, `testFolder/${id}`), {
-      text: "Hello, world!",
-    });
   }
 
   /**
@@ -183,7 +177,7 @@ class FirebaseApi {
   /**
    * Скачивает массив всех продуктов.
    */
-  public async fetchAllProducts(): Promise<Product[]> {
+  private async fetchAllProducts(): Promise<Product[]> {
     const dbRef = databaseRef(getDatabase());
     const snapshot = await get(child(dbRef, `products`));
     if (!snapshot.exists()) {
@@ -199,34 +193,25 @@ class FirebaseApi {
     return products;
   }
 
-  /**
-   * Скачивает данные продукта по его айдишнику из базы данных и возвращает их.
-   * @param productId - айдишник продукта.
-   */
-  // public async fetchProductData(
-  //   productId: string
-  // ): Promise<Product | undefined> {
-  //   const dbRef = databaseRef(getDatabase());
-  //   const snapshot = await get(child(dbRef, `products/${productId}`));
-  //   if (!snapshot.exists()) {
-  //     return undefined;
-  //   }
-  //   const product = snapshot.val();
-  //   const images = product.images || [];
-  //   return {
-  //     ...product,
-  //     id: productId,
-  //     images,
-  //   };
-  // }
+  public fetchAllProductsAndPutThemToStore() {
+    if (store.getProductsState().status === FetchProductsStatus.Success) {
+      return;
+    }
 
-  public async fetchProductsByIds(productsIds: string[]) {
-    return (await this.fetchAllProducts()).filter(({ id }) =>
-      productsIds.includes(id)
+    this.fetchAllProducts().then(
+      (products) => {
+        store.setProductsState({
+          status: FetchProductsStatus.Success,
+          products,
+        });
+      },
+      (error) => {
+        store.setProductsState({
+          status: FetchProductsStatus.Error,
+          products: [],
+        });
+      }
     );
-  }
-  public async fetchProductById(productId: string) {
-    return (await this.fetchAllProducts()).find(({ id }) => productId === id);
   }
 
   public async removeFromCart(userId: string, productId: string) {
