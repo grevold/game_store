@@ -15,12 +15,13 @@ export const CartPage = observer(() => {
   }
 
   if (userState.status === UserAuthStatus.Authorized) {
+    const products = store
+      .getProductsState()
+      .products.filter(({ id }) => userState.userData.cart.includes(id));
+
     return (
       <div className={s.root}>
-        <CartPageContent
-          productsIds={userState.userData.cart}
-          userId={userState.id}
-        />
+        <CartPageContent products={products} userId={userState.id} />
       </div>
     );
   }

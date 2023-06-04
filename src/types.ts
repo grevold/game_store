@@ -4,6 +4,12 @@ export enum UserAuthStatus {
   Authorized = "Authorized",
 }
 
+export enum FetchProductsStatus {
+  Loading = "Loading",
+  Error = "Error",
+  Success = "Success",
+}
+
 export interface UserData {
   cart: string[];
 }
@@ -21,6 +27,11 @@ export type UserState =
       id: string;
       userData: UserData;
     };
+
+export type ProductsState = {
+  status: FetchProductsStatus;
+  products: Product[];
+};
 
 export enum RoutePath {
   MainPage = "/",
