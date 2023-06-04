@@ -1,5 +1,5 @@
 import s from "./Search.module.css";
 
 export function Search() {
-  return <input className={s.root} />;
+  return <input id="catalogQuerySearch" className={s.root} />;
 }
