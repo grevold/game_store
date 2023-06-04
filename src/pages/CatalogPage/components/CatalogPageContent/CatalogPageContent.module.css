@@ -1,0 +1,12 @@
+.root {
+  width: 100%;
+  max-width: 1110px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  background: #181818;
+  color: white;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
