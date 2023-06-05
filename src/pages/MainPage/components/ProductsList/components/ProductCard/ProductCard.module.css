@@ -50,9 +50,13 @@
   color: white;
   font-family: "Proxima Nova";
   cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
 }
 .buttonSuccess {
   composes: button_add_to_cart;
   border: 1px solid white;
   background: none;
+  font-size: 14px;
+  font-weight: 500;
 }

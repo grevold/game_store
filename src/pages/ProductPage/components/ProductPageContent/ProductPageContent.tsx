@@ -36,6 +36,7 @@ export function ProductPageContent({ productData }: Props) {
               <AddProductToCartButton
                 productId={productData.id}
                 className={s.button_add_to_cart}
+                classNameSuccess={s.buttonSuccess}
               />
               <h2 className={s.price}>{productData.price} ₽</h2>
             </div>
