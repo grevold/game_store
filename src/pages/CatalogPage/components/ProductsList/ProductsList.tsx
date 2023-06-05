@@ -1,6 +1,7 @@
 import { Product } from "../../../../types";
 
 import s from "./ProductsList.module.css";
+import { ProductCard } from "./components/ProductCard/ProductCard";
 
 interface Props {
   products: Product[];
@@ -9,8 +10,8 @@ interface Props {
 export function ProductsList({ products }: Props) {
   return (
     <div className={s.root}>
-      {products.map(({ id, name }) => (
-        <div key={id}>{name}</div>
+      {products.map((product) => (
+        <ProductCard productData={product} />
       ))}
     </div>
   );

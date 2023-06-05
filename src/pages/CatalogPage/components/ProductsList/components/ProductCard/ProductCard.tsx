@@ -1,38 +1,35 @@
 import { Link } from "react-router-dom";
-import { AddProductToCartButton } from "../../../../../../components/AddProductToCartButton/AddProductToCartButton";
 import { Product, RoutePath } from "../../../../../../types";
-
 import s from "./ProductCard.module.css";
+import { AddProductToCartButton } from "../../../../../../components/AddProductToCartButton/AddProductToCartButton";
 
 interface Props {
   productData: Product;
   className?: string;
 }
 
-export const ProductCard = ({ productData }: Props) => {
+export function ProductCard({ productData }: Props) {
   return (
-    <div>
+    <div className={s.root}>
       <Link
         to={`${RoutePath.ProductPage}/?productId=${productData.id}`}
-        className={s.root}
+        className={s.link}
       >
+        <div className={s.container_info}>
+          <h2 className={s.price}>{productData.price} ₽</h2>
+        </div>
         <div
           className={s.image}
           style={{
             backgroundImage: `url("${productData.images[0].src}")`,
           }}
         ></div>
-        <div className={s.game_info}>
-          <span className={s.genre}>{productData.genre}</span>
-          <h1 className={s.name}>{productData.name}</h1>
-          <h1 className={s.price}>{productData.price} ₽</h1>
-        </div>
       </Link>
       <AddProductToCartButton
         productId={productData.id}
-        className={s.button_add_to_cart}
+        className={s.button}
         classNameSuccess={s.buttonSuccess}
       />
     </div>
   );
-};
+}
