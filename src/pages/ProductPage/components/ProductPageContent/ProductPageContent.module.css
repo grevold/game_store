@@ -86,6 +86,14 @@
 .button_add_to_cart:hover {
   background-color: #a569ff;
 }
+.buttonSuccess {
+  composes: button_add_to_cart;
+  background: none;
+  border: 1px solid white;
+}
+.buttonSuccess:hover {
+  background-color: #747474;
+}
 
 @media (min-width: 700px) {
   .container {
