@@ -10,30 +10,20 @@ export const CatalogPageContent = observer(() => {
   const allProducts = store.getProductsState().products;
   const [products, setProducts] = useState<Product[]>(allProducts);
 
-  function findNameGame(searchString: string, gameName: string) {
+  function isGameNameSatisfySearchString(
+    searchString: string,
+    gameName: string
+  ) {
     const string1 = searchString.toLowerCase();
     const string2 = gameName.toLowerCase();
-    let coincidences = 0;
-    if (searchString === "" || string1 === string2) {
-      return true;
-    }
-    for (let i = 0; i < string1.length; i++) {
-      if (string1[i] === string2[i]) {
-        coincidences++;
-      }
-    }
-    if (coincidences > 3) {
-      return true;
-    }
+    return string2.startsWith(string1);
   }
 
   function findGenreGame(searchGenre: string, gameGenre: string) {
     if (searchGenre === "Все") {
       return true;
     }
-    if (searchGenre === gameGenre) {
-      return true;
-    }
+    return searchGenre === gameGenre;
   }
 
   const handleFilterApply = (
@@ -41,11 +31,10 @@ export const CatalogPageContent = observer(() => {
     maxPrice: number,
     genre: string
   ) => {
-    console.log(typeof queryString);
     const products = allProducts.filter(
       (product) =>
         findGenreGame(genre, product.genre) &&
-        findNameGame(queryString, product.name)
+        isGameNameSatisfySearchString(queryString, product.name)
     );
     setProducts(products);
   };
