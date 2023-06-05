@@ -65,6 +65,7 @@
   margin-bottom: 10px;
   position: absolute;
   top: 250px;
+  left: 50px;
 }
 .button:hover {
   background-color: #a366ff;
@@ -72,6 +73,7 @@
 .buttonSuccess {
   composes: button;
   left: 50px;
+  background: none;
 }
 .price {
   font-family: "Franklin Gothic Medium", sans-serif;

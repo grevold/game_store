@@ -58,7 +58,7 @@ const Component = ({ productId, className, classNameSuccess }: Props) => {
     );
   }
   return (
-    <button onClick={addProductToCart} className={s.button_go_to_cart}>
+    <button onClick={addProductToCart} className={classNameSuccess}>
       <Preloader className={s.preloader} />
     </button>
   );
