@@ -51,3 +51,8 @@
   font-family: "Proxima Nova";
   cursor: pointer;
 }
+.buttonSuccess {
+  composes: button_add_to_cart;
+  border: 1px solid white;
+  background: none;
+}

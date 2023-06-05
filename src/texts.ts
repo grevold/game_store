@@ -38,6 +38,7 @@ export const texts = {
   },
   AddProduct: {
     genres: [
+      "Все",
       "Аркада",
       "Шутер",
       "Хоррор",

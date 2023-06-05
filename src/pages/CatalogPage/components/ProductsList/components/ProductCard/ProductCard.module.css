@@ -1,0 +1,80 @@
+.root {
+  width: 250px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  font-family: "Proxima Nova";
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+.link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border: none;
+  border-radius: 5px;
+}
+
+.container_info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background: rgb(9, 9, 121);
+  background: linear-gradient(
+    180deg,
+    rgba(9, 9, 121, 0) 0%,
+    rgb(120, 58, 213) 100%
+  );
+}
+.container_info:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(9, 9, 121, 0) 0%,
+    rgb(56, 18, 114) 100%
+  );
+}
+
+.button {
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid white;
+  background-color: #9146ff;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 250px;
+}
+.button:hover {
+  background-color: #a366ff;
+}
+.buttonSuccess {
+  composes: button;
+  left: 50px;
+}
+.price {
+  font-family: "Franklin Gothic Medium", sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+}

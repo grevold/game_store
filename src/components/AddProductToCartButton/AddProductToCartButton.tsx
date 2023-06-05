@@ -9,8 +9,9 @@ import { RoutePath } from "../../types";
 interface Props {
   productId: string;
   className?: string;
+  classNameSuccess?: string;
 }
-const Component = ({ productId, className }: Props) => {
+const Component = ({ productId, className, classNameSuccess }: Props) => {
   const userState = store.getUserState();
   const { state, addProductToCart } = useAddProductToCartButton(
     userState,
@@ -50,7 +51,7 @@ const Component = ({ productId, className }: Props) => {
   if (state.status === Status.Success) {
     return (
       <Link to={RoutePath.CartPage} className={s.link}>
-        <button onClick={addProductToCart} className={s.button_go_to_cart}>
+        <button onClick={addProductToCart} className={classNameSuccess}>
           Перейти в корзину
         </button>
       </Link>
