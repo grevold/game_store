@@ -1,0 +1,16 @@
+.root {
+  height: 100px;
+  width: 100%;
+}
+
+.input {
+  color: rgb(0, 0, 0);
+  height: 50px;
+  width: 100%;
+  font-size: 24px;
+  padding-left: 10px;
+}
+.bar {
+  width: 100%;
+  margin-top: 10px;
+}
