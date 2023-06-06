@@ -34,7 +34,8 @@ export const CatalogPageContent = observer(() => {
     const products = allProducts.filter(
       (product) =>
         findGenreGame(genre, product.genre) &&
-        isGameNameSatisfySearchString(queryString, product.name)
+        isGameNameSatisfySearchString(queryString, product.name) &&
+        product.price <= maxPrice
     );
     setProducts(products);
   };

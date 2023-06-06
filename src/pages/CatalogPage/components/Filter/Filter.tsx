@@ -34,10 +34,9 @@ export function Filter({ handleFilterApply }: Props) {
 
     const queryString = queryStringInput.value;
     const genre = genreInput.value;
-    const maxPriceBarValue = maxPrice.value;
-    console.log(maxPriceBarValue);
+    const maxPriceBarValue = parseInt(maxPrice.value);
 
-    handleFilterApply(queryString, 0, genre);
+    handleFilterApply(queryString, maxPriceBarValue, genre);
   };
 
   return (
