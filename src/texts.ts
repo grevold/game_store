@@ -62,8 +62,8 @@ export const texts = {
         path: RoutePath.CatalogPage,
       },
       {
-        title: "Новости",
-        path: RoutePath.NewsPage,
+        title: "О нас",
+        path: RoutePath.AboutUsPage,
       },
 
       {
@@ -85,8 +85,8 @@ export const texts = {
         path: RoutePath.CatalogPage,
       },
       {
-        title: "Новости",
-        path: RoutePath.NewsPage,
+        title: "О нас",
+        path: RoutePath.AboutUsPage,
       },
       {
         title: "Sign Up",

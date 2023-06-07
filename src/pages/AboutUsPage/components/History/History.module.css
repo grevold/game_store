@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: "Proxima Nova";
+}
+.icon {
+  width: 100px;
+}
+.text {
+  width: 100%;
+  max-width: 300px;
+}
+.title {
+  text-align: center;
+}
