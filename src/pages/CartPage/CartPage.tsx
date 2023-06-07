@@ -26,5 +26,5 @@ export const CartPage = observer(() => {
     );
   }
 
-  return <PreloaderScreen width={200} height={200} />;
+  return <PreloaderScreen />;
 });
