@@ -1,0 +1,48 @@
+.root {
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gradient {
+  background: rgb(9, 9, 121);
+  background: linear-gradient(
+    180deg,
+    rgba(9, 9, 121, 0) 0%,
+    rgb(56, 14, 121) 100%
+  );
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.darkLayout {
+  composes: gradient;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.greetingText {
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.greetingTextSpan {
+  font-size: 20px;
+}
+
+@media (min-width: 600px) {
+  .greetingText {
+    max-width: 500px;
+  }
+}

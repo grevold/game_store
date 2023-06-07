@@ -36,7 +36,7 @@ export type ProductsState = {
 export enum RoutePath {
   MainPage = "/",
   CatalogPage = "/catalog",
-  NewsPage = "/news",
+  AboutUsPage = "/aboutUs",
   SignUpPage = "/sign-up",
   SignInPage = "/sign-in",
   CartPage = "/cart",
