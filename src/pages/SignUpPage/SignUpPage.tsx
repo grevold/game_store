@@ -16,5 +16,5 @@ export const SignUpPage = observer(() => {
   if (userState.status === UserAuthStatus.Unauthorized) {
     return <SignUpPageContent />;
   }
-  return <PreloaderScreen />;
+  return <PreloaderScreen width={200} height={200} />;
 });

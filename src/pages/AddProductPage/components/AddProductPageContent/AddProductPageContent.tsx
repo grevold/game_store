@@ -9,7 +9,7 @@ export const AddProductPageContent = () => {
   const firebaseErrors: any = texts.Errors.SignUp.firebaseErrors;
 
   if (state.status === Status.Loading) {
-    return <PreloaderScreen />;
+    return <PreloaderScreen width={200} height={200} />;
   }
 
   return (

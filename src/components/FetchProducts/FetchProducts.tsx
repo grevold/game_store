@@ -3,6 +3,9 @@ import { useFetchProducts } from "./useFetchProducts";
 import { PropsWithChildren } from "react";
 import { store } from "../../store";
 import { FetchProductsStatus } from "../../types";
+import { PreloaderScreen } from "../PreloaderScreen/PreloaderScreen";
+
+import s from "./FetchProducts.module.css";
 
 interface Props {}
 
@@ -19,6 +22,6 @@ export const FetchProducts: React.FC<PropsWithChildren<Props>> = observer(
       return <h1>Ошибка, попробуйте перезагрузить страницу</h1>;
     }
 
-    return <h1>Загрузка...</h1>;
+    return <PreloaderScreen width={200} height={200} />;
   }
 );

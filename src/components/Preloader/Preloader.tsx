@@ -1,97 +1,71 @@
 interface Props {
-  className?: string;
+  width?: number;
+  height?: number;
 }
 
-export const Preloader: React.FC<Props> = ({ className }) => {
+export const Preloader: React.FC<Props> = ({ width, height }) => {
   return (
-    <svg
-      className={className}
-      viewBox="0 0 58 58"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g fill="#9146ff" fillRule="evenodd">
-        <g transform="translate(2 1)" stroke="#fff" strokeWidth="1.5">
-          <circle cx="42.601" cy="11.462" r="5" fillOpacity="1" fill="#9146ff">
-            <animate
-              attributeName="fillOpacity"
-              begin="0s"
-              dur="1.3s"
-              values="1;0;0;0;0;0;0;0"
-              calcMode="linear"
-              repeatCount="indefinite"
-            />
-          </circle>
-          <circle cx="49.063" cy="27.063" r="5" fillOpacity="0" fill="#9146ff">
-            <animate
-              attributeName="fillOpacity"
-              begin="0s"
-              dur="1.3s"
-              values="0;1;0;0;0;0;0;0"
-              calcMode="linear"
-              repeatCount="indefinite"
-            />
-          </circle>
-          <circle cx="42.601" cy="42.663" r="5" fillOpacity="0" fill="#9146ff">
-            <animate
-              attributeName="fillOpacity"
-              begin="0s"
-              dur="1.3s"
-              values="0;0;1;0;0;0;0;0"
-              calcMode="linear"
-              repeatCount="indefinite"
-            />
-          </circle>
-          <circle cx="27" cy="49.125" r="5" fillOpacity="0" fill="#9146ff">
-            <animate
-              attributeName="fillOpacity"
-              begin="0s"
-              dur="1.3s"
-              values="0;0;0;1;0;0;0;0"
-              calcMode="linear"
-              repeatCount="indefinite"
-            />
-          </circle>
-          <circle cx="11.399" cy="42.663" r="5" fillOpacity="0" fill="#9146ff">
-            <animate
-              attributeName="fillOpacity"
-              begin="0s"
-              dur="1.3s"
-              values="0;0;0;0;1;0;0;0"
-              calcMode="linear"
-              repeatCount="indefinite"
-            />
-          </circle>
-          <circle cx="4.938" cy="27.063" r="5" fillOpacity="0" fill="#9146ff">
-            <animate
-              attributeName="fillOpacity"
-              begin="0s"
-              dur="1.3s"
-              values="0;0;0;0;0;1;0;0"
-              calcMode="linear"
-              repeatCount="indefinite"
-            />
-          </circle>
-          <circle cx="11.399" cy="11.462" r="5" fillOpacity="0" fill="#9146ff">
-            <animate
-              attributeName="fillOpacity"
-              begin="0s"
-              dur="1.3s"
-              values="0;0;0;0;0;0;1;0"
-              calcMode="linear"
-              repeatCount="indefinite"
-            />
-          </circle>
-          <circle cx="27" cy="5" r="5" fillOpacity="0" fill="#9146ff">
-            <animate
-              attributeName="fillOpacity"
-              begin="0s"
-              dur="1.3s"
-              values="0;0;0;0;0;0;0;1"
-              calcMode="linear"
-              repeatCount="indefinite"
-            />
-          </circle>
-        </g>
+    <svg version="1.0" width={width} height={height} viewBox="0 0 128 128">
+      <rect x="0" y="0" width="100%" height="100%" fill="none" />
+      <g>
+        <circle cx="16" cy="64" r="16" fill="#9146ff" />
+        <circle
+          cx="16"
+          cy="64"
+          r="16"
+          fill="#b684ff"
+          transform="rotate(45,64,64)"
+        />
+        <circle
+          cx="16"
+          cy="64"
+          r="16"
+          fill="#d1b1ff"
+          transform="rotate(90,64,64)"
+        />
+        <circle
+          cx="16"
+          cy="64"
+          r="16"
+          fill="#e9daff"
+          transform="rotate(135,64,64)"
+        />
+        <circle
+          cx="16"
+          cy="64"
+          r="16"
+          fill="#f2e9ff"
+          transform="rotate(180,64,64)"
+        />
+        <circle
+          cx="16"
+          cy="64"
+          r="16"
+          fill="#f2e9ff"
+          transform="rotate(225,64,64)"
+        />
+        <circle
+          cx="16"
+          cy="64"
+          r="16"
+          fill="#f2e9ff"
+          transform="rotate(270,64,64)"
+        />
+        <circle
+          cx="16"
+          cy="64"
+          r="16"
+          fill="#f2e9ff"
+          transform="rotate(315,64,64)"
+        />
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          values="0 64 64;315 64 64;270 64 64;225 64 64;180 64 64;135 64 64;90 64 64;45 64 64"
+          calcMode="discrete"
+          dur="720ms"
+          repeatCount="indefinite"
+        ></animateTransform>
       </g>
     </svg>
   );

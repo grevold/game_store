@@ -11,7 +11,7 @@ export const SignInPageContent = () => {
   const firebaseErrors: any = texts.Errors.SignIn.firebaseErrors;
 
   if (state.status === Status.Loading) {
-    return <PreloaderScreen />;
+    return <PreloaderScreen width={200} height={200} />;
   }
 
   return (
