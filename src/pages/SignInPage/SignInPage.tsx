@@ -18,5 +18,5 @@ export const SignInPage = observer(() => {
     return <SignInPageContent />;
   }
 
-  return <PreloaderScreen width={200} height={200} />;
+  return <PreloaderScreen />;
 });

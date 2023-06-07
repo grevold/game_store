@@ -22,6 +22,6 @@ export const FetchProducts: React.FC<PropsWithChildren<Props>> = observer(
       return <h1>Ошибка, попробуйте перезагрузить страницу</h1>;
     }
 
-    return <PreloaderScreen width={200} height={200} />;
+    return <PreloaderScreen />;
   }
 );

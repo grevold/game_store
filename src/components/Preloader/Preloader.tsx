@@ -1,11 +1,14 @@
+import cn from "classnames";
+
+import s from "./Preloader.module.css";
+
 interface Props {
-  width?: number;
-  height?: number;
+  className?: string;
 }
 
-export const Preloader: React.FC<Props> = ({ width, height }) => {
+export const Preloader: React.FC<Props> = ({ className }) => {
   return (
-    <svg version="1.0" width={width} height={height} viewBox="0 0 128 128">
+    <svg version="1.0" viewBox="0 0 128 128" className={cn(s.root, className)}>
       <rect x="0" y="0" width="100%" height="100%" fill="none" />
       <g>
         <circle cx="16" cy="64" r="16" fill="#9146ff" />
