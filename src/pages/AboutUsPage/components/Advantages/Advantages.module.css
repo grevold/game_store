@@ -1,0 +1,53 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 9, 121, 0) 0%,
+    rgb(56, 14, 121) 100%
+  );
+  padding-top: 50px;
+}
+.title {
+  font-family: "Proxima Nova";
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.listAdvantages {
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0 100px rgb(160, 157, 165);
+  margin-bottom: 50px;
+}
+.subTitle {
+  font-family: "Proxima Nova";
+  font-weight: 700;
+  max-width: 200px;
+  margin-top: 10px;
+}
+.description {
+  margin-top: 10px;
+  max-width: 200px;
+  font-family: "Proxima Nova";
+  font-size: 20px;
+}
+
+@media (min-width: 800px) {
+  .listAdvantages {
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: start; */
+    align-items: start;
+    max-width: 700px;
+    gap: 30px;
+  }
+}
