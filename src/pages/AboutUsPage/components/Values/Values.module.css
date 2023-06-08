@@ -1,0 +1,52 @@
+.root {
+  background: rgb(56, 14, 121) 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: "Proxima Nova";
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 50px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.value {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.value span {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+@media (min-width: 1000px) {
+  .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    max-width: 800px;
+    gap: 30px;
+  }
+}
