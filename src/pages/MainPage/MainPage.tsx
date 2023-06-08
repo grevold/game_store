@@ -1,3 +1,4 @@
+import { AboutUsFilm } from "./components/AboutUsFilm/AboutUsFilm";
 import { Banner } from "./components/Banner/Banner";
 import { ProductsList } from "./components/ProductsList/ProductsList";
 
@@ -8,6 +9,7 @@ export const MainPage = () => {
     <div className={s.root}>
       <Banner />
       <ProductsList />
+      <AboutUsFilm />
     </div>
   );
 };
