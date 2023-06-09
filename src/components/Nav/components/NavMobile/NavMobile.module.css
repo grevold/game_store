@@ -1,7 +1,15 @@
+.container {
+  height: 50px;
+}
+
 .root {
   height: 50px;
   background-color: #9146ff;
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
 
 .burgerIcon {

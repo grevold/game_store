@@ -14,6 +14,7 @@ export const NavMobile: React.FC<Props> = ({ className }) => {
 
   return (
     <>
+      <div className={s.container} />
       <header className={cn(s.root, className)}>
         <BurgerIcon className={s.burgerIcon} onClick={handleClick} />
       </header>
