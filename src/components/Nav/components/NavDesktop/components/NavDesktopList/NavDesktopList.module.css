@@ -1,0 +1,35 @@
+.navigation {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  font-size: 20px;
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+  background: linear-gradient(
+    0deg,
+    rgba(9, 9, 121, 0) 0%,
+    rgba(145, 70, 255, 1) 100%
+  );
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+.logo {
+  width: 100px;
+}
+.sign_out_button {
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  font-size: 20px;
+}

@@ -1,38 +1,10 @@
 .root {
+  width: 100%;
   display: flex;
   height: 80px;
-  background-color: #9146ff;
   justify-content: center;
   align-items: center;
-}
-
-.navigation {
-  height: 100%;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-family: "Proxima Nova";
-  font-weight: 600;
-  font-size: 20px;
-  width: 100%;
-  max-width: 1110px;
-  margin: 0 auto;
-}
-
-.link {
-  color: white;
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-.logo {
-  width: 100px;
-}
-.sign_out_button {
-  font-family: "Proxima Nova";
-  font-weight: 600;
-  font-size: 20px;
+  position: fixed;
+  z-index: 3;
+  transition: background-color 0.2s ease-in-out;
 }
