@@ -2,7 +2,7 @@
   height: 100%;
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-family: "Proxima Nova";
   font-weight: 600;
