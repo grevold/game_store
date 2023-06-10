@@ -17,9 +17,7 @@ export const NavDesktopList = observer(() => {
     const { cart } = userState.userData;
     return (
       <ul className={s.navigation}>
-        <Link to={"/"}>
-          <Logo className={s.logo} />
-        </Link>
+        <Logo className={s.logo} />
         {routes.map(({ title, path }) => (
           <li key={title}>
             <Link className={s.link} to={path}>

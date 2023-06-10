@@ -7,7 +7,7 @@ export function ArrowDown() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M35 2L17.5 16.5 2 2" stroke="#fff" stroke-width="4" />
+      <path d="M35 2L17.5 16.5 2 2" stroke="#fff" strokeWidth="4" />
     </svg>
   );
 }

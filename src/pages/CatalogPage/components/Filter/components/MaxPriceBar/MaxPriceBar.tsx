@@ -5,7 +5,6 @@ import s from "./MaxPriceBar.module.css";
 export const priceBarConfig = {
   min: 59,
   max: 2500,
-  defaultValue: 1000,
   step: 100,
 };
 

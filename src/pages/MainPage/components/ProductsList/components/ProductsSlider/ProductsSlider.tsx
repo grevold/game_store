@@ -33,7 +33,6 @@ const swiperConfig: SwiperProps = {
 
 export const ProductsSlider: React.FC<Props> = ({ products }) => {
   useProductSlider();
-  console.log(products[0]);
 
   return (
     <Swiper {...swiperConfig}>
