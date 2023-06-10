@@ -10,10 +10,12 @@ import { AddProductPage } from "./pages/AddProductPage/AddProductPage";
 import { ProductPage } from "./pages/ProductPage/ProductPage";
 import { Layout } from "./components/Layout/Layout";
 import { FetchProducts } from "./components/FetchProducts/FetchProducts";
+import { ScrollToTop } from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <FetchProducts>
         <Layout>
           <Routes>

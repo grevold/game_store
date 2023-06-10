@@ -7,8 +7,8 @@ export function ArrowUp() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_9_2)">
-        <path d="M2 18L19.5 3.5L35 18" stroke="white" stroke-width="4" />
+      <g clipPath="url(#clip0_9_2)">
+        <path d="M2 18L19.5 3.5L35 18" stroke="white" strokeWidth="4" />
       </g>
       <defs>
         <clipPath id="clip0_9_2">

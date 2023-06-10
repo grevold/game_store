@@ -36,8 +36,8 @@ export function ImagesUploader({ onSelect, className }: Props) {
       <Dropzone
         onDragEnter={handleDragEnter}
         onDragLeave={handleDragLeave}
-        onDropRejected={console.log}
-        onError={console.log}
+        // onDropRejected={console.log}
+        // onError={console.log}
         onDrop={handleSelect}
         {...CONFIG}
       >

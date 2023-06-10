@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { priceBarConfig } from "./MaxPriceBar";
 
 export function useMaxPriceBar() {
-  const [value, setValue] = useState<number>(priceBarConfig.defaultValue);
+  const [value, setValue] = useState<number>(1000);
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const value = parseInt(event.target.value);
