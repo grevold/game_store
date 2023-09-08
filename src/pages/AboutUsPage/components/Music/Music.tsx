@@ -1,83 +1,48 @@
 import s from "./Music.module.css";
+import { Howl, Howler } from "howler";
 
 export function Music() {
-  function playKick() {
-    let audio = new Audio(
-      `${process.env.PUBLIC_URL}/Samples/Drums_mp3/Kick_02.mp3`
-    );
-    audio.play();
-  }
-  function playHat() {
-    let audio = new Audio(
-      `${process.env.PUBLIC_URL}/Samples/Drums_mp3/Hat_01.mp3`
-    );
-    audio.play();
-  }
-  function playClap() {
-    let audio = new Audio(
-      `${process.env.PUBLIC_URL}/Samples/Drums_mp3/Clap_06.mp3`
-    );
-    audio.play();
-  }
-  function playBass() {
-    let audio = new Audio(
-      `${process.env.PUBLIC_URL}/Samples/Drums_mp3/Bass_01.mp3`
-    );
-    audio.play();
-  }
+  const kick = new Howl({
+    src: [`${process.env.PUBLIC_URL}/Samples/Drums_mp3/Kick_02.mp3`],
+  });
+  const hat = new Howl({
+    src: [`${process.env.PUBLIC_URL}/Samples/Drums_mp3/Hat_01.mp3`],
+  });
+  const clap = new Howl({
+    src: [`${process.env.PUBLIC_URL}/Samples/Drums_mp3/Clap_06.mp3`],
+  });
+  const bass = new Howl({
+    src: [`${process.env.PUBLIC_URL}/Samples/Drums_mp3/Bass_01.mp3`],
+  });
 
-  function playKickOGG() {
-    let audio = new Audio(
-      `${process.env.PUBLIC_URL}/Samples/Drums_ogg/Kick_02.ogg`
-    );
-    audio.play();
-  }
-  function playHatOGG() {
-    let audio = new Audio(
-      `${process.env.PUBLIC_URL}/Samples/Drums_ogg/Hat_01.ogg`
-    );
-    audio.play();
-  }
-  function playClapOGG() {
-    let audio = new Audio(
-      `${process.env.PUBLIC_URL}/Samples/Drums_ogg/Clap_06.ogg`
-    );
-    audio.play();
-  }
-  function playBassOGG() {
-    let audio = new Audio(
-      `${process.env.PUBLIC_URL}/Samples/Drums_ogg/Bass_01.ogg`
-    );
-    audio.play();
-  }
   return (
     <div>
       <div className={s.playground}>
-        <button className={s.pad} onTouchStart={playKick}>
+        <button className={s.pad} onTouchStart={() => kick.play()}>
           Kick mp3
         </button>
-        <button className={s.pad} onTouchStart={playHat}>
+        <button className={s.pad} onTouchStart={() => hat.play()}>
           Hat mp3
         </button>
-        <button className={s.pad} onTouchStart={playClap}>
+        <button className={s.pad} onTouchStart={() => clap.play()}>
           Clap mp3
         </button>
-        <button className={s.pad} onTouchStart={playBass}>
+        <button className={s.pad} onTouchStart={() => bass.play()}>
           Bass mp3
         </button>
       </div>
       <div className={s.playground}>
-        <button className={s.pad} onTouchStart={playKickOGG}>
-          Kick ogg
+        <button className={s.pad} onClick={() => kick.play()}>
+          Kick mp3
         </button>
-        <button className={s.pad} onTouchStart={playHatOGG}>
-          Hat ogg
+        <button className={s.pad} onClick={() => hat.play()}>
+          Hat mp3
         </button>
-        <button className={s.pad} onTouchStart={playClapOGG}>
-          Clap ogg
+        <button className={s.pad} onClick={() => clap.play()}>
+          Clap mp3
         </button>
-        <button className={s.pad} onTouchStart={playBassOGG}>
-          Bass ogg
+        <button className={s.pad} onClick={() => bass.play()}>
+          Bass mp3
         </button>
       </div>
     </div>
