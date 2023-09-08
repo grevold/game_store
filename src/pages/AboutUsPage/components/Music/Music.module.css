@@ -1,0 +1,26 @@
+.root {
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+}
+.playground {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 10px;
+}
+.pad {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  color: black;
+}
