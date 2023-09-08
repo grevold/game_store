@@ -53,7 +53,7 @@ export function Music() {
   return (
     <div>
       <div className={s.playground}>
-        <button className={s.pad} onClick={playKick}>
+        <button className={s.pad} onTouchStart={playKick}>
           Kick mp3
         </button>
         <button className={s.pad} onTouchStart={playHat}>
@@ -67,7 +67,7 @@ export function Music() {
         </button>
       </div>
       <div className={s.playground}>
-        <button className={s.pad} onClick={playKickOGG}>
+        <button className={s.pad} onTouchStart={playKickOGG}>
           Kick ogg
         </button>
         <button className={s.pad} onTouchStart={playHatOGG}>
