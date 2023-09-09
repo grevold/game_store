@@ -15,10 +15,12 @@ export function Music() {
     src: [`${process.env.PUBLIC_URL}/Samples/Drums_mp3/Bass_01.mp3`],
   });
 
+  console.log("render");
+
   return (
     <div>
       <div className={s.playground}>
-        <button className={s.pad} onTouchStart={() => kick.play()}>
+        <button className={s.pad} onTouchStart={() => kick.unload()}>
           Kick mp3
         </button>
         <button className={s.pad} onTouchStart={() => hat.play()}>
