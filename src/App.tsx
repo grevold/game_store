@@ -11,8 +11,13 @@ import { ProductPage } from "./pages/ProductPage/ProductPage";
 import { Layout } from "./components/Layout/Layout";
 import { FetchProducts } from "./components/FetchProducts/FetchProducts";
 import { ScrollToTop } from "./components/ScrollToTop/ScrollToTop";
+import { useMount } from "react-use";
+// @ts-ignore: Unreachable code error
+import initReactFastclick from "react-fastclick";
 
 function App() {
+  useMount(initReactFastclick);
+
   return (
     <HashRouter>
       <ScrollToTop />
