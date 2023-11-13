@@ -10,7 +10,6 @@ import { Music } from "./components/Music/Music";
 export function AboutUsPage() {
   return (
     <div className={s.root}>
-      <Music />
       <Intro />
       <History />
       <Advantages />
