@@ -5,15 +5,17 @@ import { Values } from "./components/Values/Values";
 
 import s from "./AboutUsPage.module.css";
 import { Film } from "./components/Film/Film";
+import { Pads } from "./components/Pads/Pads";
 
 export function AboutUsPage() {
   return (
     <div className={s.root}>
-      <Intro />
+      <Pads />
+      {/* <Intro />
       <History />
       <Advantages />
       <Values />
-      <Film />
+      <Film /> */}
     </div>
   );
 }
