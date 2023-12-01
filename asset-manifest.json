@@ -1,22 +1,16 @@
 {
   "files": {
-    "main.css": "/game_store/static/css/main.6023b220.css",
-    "main.js": "/game_store/static/js/main.d9836c8e.js",
+    "main.css": "/game_store/static/css/main.c0445525.css",
+    "main.js": "/game_store/static/js/main.0e41e31e.js",
     "static/js/787.41265a80.chunk.js": "/game_store/static/js/787.41265a80.chunk.js",
-    "static/media/aboutPageCover.png": "/game_store/static/media/aboutPageCover.3fc42b1b90c4c73dca17.png",
     "static/media/Not_found.png": "/game_store/static/media/Not_found.3ff0357e627b7e8f6090.png",
-    "static/media/tentsIcon.png": "/game_store/static/media/tentsIcon.3cf67c31273178ae75fc.png",
-    "static/media/instrumentsIcon.png": "/game_store/static/media/instrumentsIcon.5bff4b11ee206a707877.png",
-    "static/media/friendsIcon.png": "/game_store/static/media/friendsIcon.e4de7e924fb5f84d955e.png",
-    "static/media/puzzleIcon.png": "/game_store/static/media/puzzleIcon.99fe1ce66fdbb9446850.png",
-    "static/media/rocketIcon.png": "/game_store/static/media/rocketIcon.0508000b0edcc8af9832.png",
     "index.html": "/game_store/index.html",
-    "main.6023b220.css.map": "/game_store/static/css/main.6023b220.css.map",
-    "main.d9836c8e.js.map": "/game_store/static/js/main.d9836c8e.js.map",
+    "main.c0445525.css.map": "/game_store/static/css/main.c0445525.css.map",
+    "main.0e41e31e.js.map": "/game_store/static/js/main.0e41e31e.js.map",
     "787.41265a80.chunk.js.map": "/game_store/static/js/787.41265a80.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6023b220.css",
-    "static/js/main.d9836c8e.js"
+    "static/css/main.c0445525.css",
+    "static/js/main.0e41e31e.js"
   ]
 }
