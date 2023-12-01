@@ -1,0 +1,28 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 620px;
+  margin: auto;
+}
+
+.padTrigger {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(12, 27, 197);
+}
+.padTrigger:active {
+  background-color: rgb(67, 79, 218);
+}
+.padGate {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(24, 149, 4);
+}
+.padGate:active {
+  background-color: rgb(77, 174, 62);
+}
